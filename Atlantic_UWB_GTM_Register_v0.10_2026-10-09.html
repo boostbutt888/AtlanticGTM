@@ -1,0 +1,1055 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Atlantic GTM Register</title><style>
+:root{--bg:#eef1f4;--paper:#f8fafb;--ink:#14243a;--muted:#5d6b7c;--line:#c4ccd6;--focus:#1f6f8b;--chip:#e3e8ee;--ok:#2e7d4f;--ok-soft:#dcf1e3;--warn:#9a6700;--warn-soft:#fbefd2;--bad:#b42318;--bad-soft:#fde4e1;--doc:#1f6f8b;--doc-soft:#dcecf2;
+--f-display:"Familjen Grotesk","Helvetica Neue",Arial,sans-serif;--f-body:"Source Sans 3","Segoe UI",Roboto,sans-serif;--f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1720;--paper:#16212d;--ink:#e3e9f0;--muted:#93a1b2;--line:#33475b;--focus:#6cc0db;--chip:#213041;--ok:#7fd3a0;--ok-soft:#173a26;--warn:#f0c46a;--warn-soft:#3a2e12;--bad:#f39a90;--bad-soft:#3d1c19;--doc:#6cc0db;--doc-soft:#173544;color-scheme:dark}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}
+.wrap{max-width:1320px;margin:0 auto;padding:28px 20px 56px}
+.top{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;font-size:14px;margin-bottom:14px}
+.top a{color:var(--focus);font-weight:600}
+.eyebrow{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--f-display);font-size:clamp(26px,3.2vw,36px);line-height:1.1;margin:6px 0 4px;text-wrap:balance}
+h2{font-family:var(--f-display);font-size:22px;margin:30px 0 8px}h3{font-family:var(--f-display);font-size:17px;margin:20px 0 8px}
+p,li{max-width:80ch}a{color:var(--focus)}
+.tbl{overflow-x:auto;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--paper);position:sticky;top:0}
+td:first-child{font-weight:600;white-space:nowrap}
+.pill{display:inline-block;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:999px;white-space:nowrap;background:var(--chip);color:var(--muted)}
+.p-ok{background:var(--ok-soft);color:var(--ok)}.p-warn{background:var(--warn-soft);color:var(--warn)}.p-bad{background:var(--bad-soft);color:var(--bad)}.p-doc{background:var(--doc-soft);color:var(--doc)}
+code{font-family:var(--f-mono);font-size:13px}pre{overflow-x:auto;background:var(--paper);padding:12px;border-radius:8px}
+.foot{color:var(--muted);font-size:13px;margin-top:28px}
+</style><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap"></head><body><div class="wrap"><div class="top"><a href="Atlantic_Product_Market_Customer_Map.html">← Product map</a><a href="Atlantic_UWB_GTM_Plan_v0.10_2026-10-07.html">GTM plan deck</a><a href="Atlantic_UWB_GTM_Register_v0.10_2026-10-09.html">Register</a><a href="Atlantic_UWB_GTM_CONTEXT_v0.10_2026-10-07.html">Context file</a></div><div class="eyebrow">STYL Solutions · Atlantic GTM · Governance</div><h1>Atlantic UWB GTM: Assumptions and Decisions Register</h1><p>9 Oct 2026 · JC (product and vertical owner)</p><h2>About this register</h2>
+<p>This register lists every decision and assumption behind the Atlantic UWB go-to-market plan (deck v0.10, 7 Oct 2026) and the product sheets v0.1 (9 Oct 2026). JC built the framework as product and vertical owner, and stood in for several other roles to do it. Each item names the role that should own it, so that owner can confirm, change or reject it.</p>
+<ul>
+<li><strong>Stood in</strong> = who gave the input during the build: JC, the CIO documents, the product map, or Claude (an assumption proposed during drafting).</li>
+<li><strong>Should own</strong> = the role accountable for the final answer. Where JC is not that role, the item needs that owner's sign-off.</li>
+<li><strong>Status</strong> = Confirmed (owner agreed) · Ratify (decided in the build, owner must confirm) · To verify (needs data or a test) · Open (no decision yet).</li>
+<li><strong>Confidence</strong> (assumptions only) = Certain (primary source) · Likely (good secondary source or inference) · Guessing (judgement; never in a Sales Sheet).</li>
+</ul>
+<p>Nothing here is final until its owner signs it. Until then, use the prices for pilots only.</p>
+<h2>Owner roles</h2>
+<p>JC owns the product and vertical decisions. For the other eleven roles JC gave a best-knowledge input, and each owner must now confirm it.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Owns</th>
+<th>JC stood in?</th>
+<th>Decisions</th>
+<th>Assumptions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CEO</td>
+<td>Strategy, budget, hiring, discounts above 20%</td>
+<td>Yes</td>
+<td>D3, D6, D7, D8, D15</td>
+<td>A9, A38, A48, A49</td>
+</tr>
+<tr>
+<td>CIO</td>
+<td>Product sheet framework, release of each sheet, platform and hosting</td>
+<td>No: CIO documents used</td>
+<td>D12, D13, D21</td>
+<td>A2, A4, A5, A34, A35, A37, A42</td>
+</tr>
+<tr>
+<td>Sales Director</td>
+<td>Price list, discounts up to 20%, funnel, accounts, references</td>
+<td>Yes</td>
+<td>D4, D10, D11, D16, D19, D22</td>
+<td>A3, A6, A10, A21–A28, A43, A45, A47</td>
+</tr>
+<tr>
+<td>Finance (CFO)</td>
+<td>Costs, margins, currency, payment terms, commission</td>
+<td>Yes</td>
+<td>D2, D5, D7, D15, D16, D17</td>
+<td>A1, A5–A8, A22, A31, A33–A36, A39, A47, A48</td>
+</tr>
+<tr>
+<td>Engineering lead</td>
+<td>Product facts: accuracy, capacity, battery, hardened kit, phones</td>
+<td>Partly: CIO brief</td>
+<td>D18, D20</td>
+<td>A11–A15, A17–A19</td>
+</tr>
+<tr>
+<td>Hardware and supply chain</td>
+<td>Hardware cost, lead time, MOQ, radio approval, pilot pool</td>
+<td>Yes</td>
+<td>D6</td>
+<td>A16, A20, A31, A40</td>
+</tr>
+<tr>
+<td>Product lead (JC)</td>
+<td>Scope, markets, price units, packages, examples</td>
+<td>Own role</td>
+<td>D1, D10, D19, D20</td>
+<td>A25–A27, A41, A43, A44</td>
+</tr>
+<tr>
+<td>Service team lead</td>
+<td>Installation, survey, set-up rates</td>
+<td>Yes</td>
+<td>D9, D14</td>
+<td>A29, A32</td>
+</tr>
+<tr>
+<td>Support lead</td>
+<td>24/7 rota and its cost</td>
+<td>Yes</td>
+<td>—</td>
+<td>A38</td>
+</tr>
+<tr>
+<td>BD lead</td>
+<td>NXP, integrators, Japan path</td>
+<td>Yes</td>
+<td>D11</td>
+<td>A30</td>
+</tr>
+<tr>
+<td>Marketing lead</td>
+<td>Events, content, budget</td>
+<td>Yes</td>
+<td>—</td>
+<td>A46</td>
+</tr>
+<tr>
+<td>HR</td>
+<td>Salary benchmarks, hiring triggers</td>
+<td>Yes</td>
+<td>—</td>
+<td>A49, A50</td>
+</tr>
+</tbody>
+</table></div><h2>Decisions taken</h2>
+<p>Twenty-two decisions shaped v0.1 to v0.10 and the product sheets; 18 still need their owner to ratify or decide. Dates are 2026.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Date</th>
+<th>Decision</th>
+<th>Decided by</th>
+<th>Should own</th>
+<th>Status</th>
+<th>Where used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D1</td>
+<td>6 Oct</td>
+<td>Mark every figure preliminary; keep an assumptions register; highlight each variable figure</td>
+<td>JC</td>
+<td>Product lead (JC)</td>
+<td><span class="pill p-ok">Confirmed</span></td>
+<td>Whole deck</td>
+</tr>
+<tr>
+<td>D2</td>
+<td>6 Oct</td>
+<td>Keep an internal cost list apart from the selling price list</td>
+<td>JC</td>
+<td>Finance</td>
+<td><span class="pill p-doc">Ratify</span></td>
+<td>Sections 4–5</td>
+</tr>
+<tr>
+<td>D3</td>
+<td>6 Oct</td>
+<td>Sell in Singapore and Japan first, where we hold radio approval</td>
+<td>JC</td>
+<td>CEO</td>
+<td><span class="pill p-doc">Ratify</span></td>
+<td>Strategy</td>
+</tr>
+<tr>
+<td>D4</td>
+<td>6 Oct</td>
+<td>Customers fund pilots; the fee goes to year 1 if they buy within 6 months</td>
+<td>JC</td>
+<td>Sales Director</td>
+<td><span class="pill p-doc">Ratify</span></td>
+<td>Pilot slide; all sheets</td>
+</tr>
+<tr>
+<td>D5</td>
+<td>6 Oct</td>
+<td>Sell anchors at 50% margin and tags at 30%</td>
+<td>JC</td>
+<td>Finance</td>
+<td><span class="pill ">Superseded</span></td>
+<td>Replaced by D12</td>
+</tr>
+<tr>
+<td>D6</td>
+<td>6 Oct</td>
+<td>Order a STYL pilot pool now: 50 + 10 hardened anchors, 200 tags (~S$15,000)</td>
+<td>JC</td>
+<td>Hardware and supply chain; CEO for budget</td>
+<td><span class="pill p-doc">Ratify</span></td>
+<td>Decision 3 in deck</td>
+</tr>
+<tr>
+<td>D7</td>
+<td>6 Oct</td>
+<td>Offer an optional profit-based commission plan</td>
+<td>JC</td>
+<td>CEO, Finance</td>
+<td><span class="pill p-bad">Open</span></td>
+<td>Commission slide</td>
+</tr>
+<tr>
+<td>D8</td>
+<td>6 Oct</td>
+<td>Make a dedicated core team of ~7; other hires start on agreed triggers</td>
+<td>JC</td>
+<td>CEO</td>
+<td><span class="pill p-doc">Ratify</span></td>
+<td>Teams slides</td>
+</tr>
+<tr>
+<td>D9</td>
+<td>7 Oct</td>
+<td>Price installation as a 10-man-day package per site</td>
+<td>JC</td>
+<td>Service team lead</td>
+<td><span class="pill ">Superseded</span></td>
+<td>Replaced by D14</td>
+</tr>
+<tr>
+<td>D10</td>
+<td>7 Oct</td>
+<td>Markets and accounts follow the product map; manufacturing and industrial safety stay as later markets</td>
+<td>JC</td>
+<td>Product lead (JC), Sales Director</td>
+<td><span class="pill p-doc">Ratify</span></td>
+<td>Sections 1–2, 6</td>
+</tr>
+<tr>
+<td>D11</td>
+<td>7 Oct</td>
+<td>LTA is the transit lead; Japan operators follow through partners</td>
+<td>JC (from map)</td>
+<td>Sales Director, BD lead</td>
+<td><span class="pill p-doc">Ratify</span></td>
+<td>Transit example; Gates sheet</td>
+</tr>
+<tr>
+<td>D12</td>
+<td>7 Oct</td>
+<td>Use the CIO framework for every UWB product: buyer unit, three price parts, hardware as a monthly service, three packages maximum, fixed-fee pilot</td>
+<td>JC</td>
+<td>CIO</td>
+<td><span class="pill p-doc">Ratify</span></td>
+<td>Whole deck; all sheets</td>
+</tr>
+<tr>
+<td>D13</td>
+<td>7 Oct</td>
+<td>Where the CIO documents conflict with earlier inputs, the CIO documents win (±20 cm, CIO costs, host choice)</td>
+<td>JC</td>
+<td>CIO</td>
+<td><span class="pill p-doc">Ratify</span></td>
+<td>Changes slide</td>
+</tr>
+<tr>
+<td>D14</td>
+<td>7 Oct</td>
+<td>Set-up = site survey + a price for each anchor + integration days</td>
+<td>CIO documents</td>
+<td>Service team lead</td>
+<td><span class="pill p-doc">Ratify</span></td>
+<td>Set-up slide; all sheets</td>
+</tr>
+<tr>
+<td>D15</td>
+<td>7 Oct</td>
+<td>No quote below 30% gross margin; 40% target per customer over 24 months; Sales Director up to 20% discount, CEO above</td>
+<td>CIO documents</td>
+<td>CEO, Finance</td>
+<td><span class="pill p-doc">Ratify</span></td>
+<td>Margin checks</td>
+</tr>
+<tr>
+<td>D16</td>
+<td>7 Oct</td>
+<td>Proposed units and prices for Operations RTLS, Flow and Gates</td>
+<td>JC with Claude</td>
+<td>Sales Director, Finance</td>
+<td><span class="pill p-bad">Open</span></td>
+<td>Price matrix; three sheets</td>
+</tr>
+<tr>
+<td>D17</td>
+<td>7 Oct</td>
+<td>All prices in SGD before GST</td>
+<td>CIO documents</td>
+<td>Finance</td>
+<td><span class="pill p-doc">Ratify</span></td>
+<td>Whole deck</td>
+</tr>
+<tr>
+<td>D18</td>
+<td>9 Oct</td>
+<td>Only Engineering-confirmed facts go in a Sales Sheet; unconfirmed claims carry an E mark</td>
+<td>CIO guide</td>
+<td>Engineering lead</td>
+<td><span class="pill p-ok">Confirmed</span></td>
+<td>Three sheets</td>
+</tr>
+<tr>
+<td>D19</td>
+<td>9 Oct</td>
+<td>First market per sheet: Singapore cargo handlers, Singapore terminals, Singapore rail and bus</td>
+<td>JC</td>
+<td>Product lead (JC), Sales Director</td>
+<td><span class="pill p-doc">Ratify</span></td>
+<td>Three sheets</td>
+</tr>
+<tr>
+<td>D20</td>
+<td>9 Oct</td>
+<td>Flow uses the airport’s own counters; no passenger location claim until phone capacity is confirmed</td>
+<td>JC with Claude</td>
+<td>Product lead (JC), Engineering lead</td>
+<td><span class="pill p-doc">Ratify</span></td>
+<td>Flow sheet</td>
+</tr>
+<tr>
+<td>D21</td>
+<td>7 Oct</td>
+<td>Retire Core, Operate and Sovereign editions; one package per product, cloud or self-hosted</td>
+<td>CIO documents</td>
+<td>CIO</td>
+<td><span class="pill p-doc">Ratify</span></td>
+<td>Host options slide</td>
+</tr>
+<tr>
+<td>D22</td>
+<td>7 Oct</td>
+<td>Healthcare example: TTSH, 500 beds, self-hosted, Ward prices</td>
+<td>JC</td>
+<td>Sales Director</td>
+<td><span class="pill p-doc">Ratify</span></td>
+<td>Example 1</td>
+</tr>
+</tbody>
+</table></div><h2>Assumptions register</h2>
+<p>Fifty assumptions carry every price, cost and time in deck v0.10; 41 still need their owner to ratify, verify or decide. Source shows where the value came from; Should own shows who must confirm it. Ratify = a value JC or the CIO documents supplied on another owner's behalf.</p>
+<h3>Rules, product facts and prices (A1–A30)</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Area</th>
+<th>Assumption</th>
+<th>Value used</th>
+<th>Source</th>
+<th>Stood in</th>
+<th>Should own</th>
+<th>Confidence</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1</td>
+<td>Commercial rules</td>
+<td>Currency</td>
+<td>SGD before GST; US$1 = S$1.28 for USD inputs</td>
+<td>CIO</td>
+<td>CIO documents</td>
+<td>Finance</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-doc">Ratify</span></td>
+</tr>
+<tr>
+<td>A2</td>
+<td>Commercial rules</td>
+<td>Price structure</td>
+<td>Software per unit per year + hardware service per unit per month + set-up</td>
+<td>CIO</td>
+<td>CIO documents</td>
+<td>CIO</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-ok">Confirmed</span></td>
+</tr>
+<tr>
+<td>A3</td>
+<td>Commercial rules</td>
+<td>Price units</td>
+<td>Bed (Ward); 1,000 m² (Operations, Flow); gate (Gates)</td>
+<td>CIO, mine</td>
+<td>CIO documents + Claude</td>
+<td>Sales Director</td>
+<td><span class="pill p-bad">Guessing</span></td>
+<td><span class="pill p-bad">For decision</span></td>
+</tr>
+<tr>
+<td>A4</td>
+<td>Commercial rules</td>
+<td>Packages</td>
+<td>3 maximum, one "start here"; Ward: one package, two host options</td>
+<td>CIO</td>
+<td>CIO documents</td>
+<td>CIO</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-ok">Confirmed</span></td>
+</tr>
+<tr>
+<td>A5</td>
+<td>Commercial rules</td>
+<td>Platform fee</td>
+<td>S$95,000 per self-hosted deployment per year; one deployment can serve several sites</td>
+<td>CIO, mine</td>
+<td>CIO documents + Claude</td>
+<td>CIO, Finance</td>
+<td><span class="pill p-warn">Likely</span></td>
+<td><span class="pill p-warn">To verify</span></td>
+</tr>
+<tr>
+<td>A6</td>
+<td>Commercial rules</td>
+<td>Minimum fee</td>
+<td>S$60,000 per site per year; Gates S$250,000 per operator</td>
+<td>CIO, mine</td>
+<td>CIO documents + Claude</td>
+<td>Sales Director, Finance</td>
+<td><span class="pill p-warn">Likely</span></td>
+<td><span class="pill p-warn">To verify</span></td>
+</tr>
+<tr>
+<td>A7</td>
+<td>Commercial rules</td>
+<td>Contract and terms</td>
+<td>3 years; software yearly in advance; hardware monthly; set-up on delivery, net 30</td>
+<td>CIO, mine</td>
+<td>CIO documents + Claude</td>
+<td>Finance</td>
+<td><span class="pill p-warn">Likely</span></td>
+<td><span class="pill p-warn">Proposed</span></td>
+</tr>
+<tr>
+<td>A8</td>
+<td>Commercial rules</td>
+<td>Margin rules</td>
+<td>No quote below 30%; target 40% for each customer over 24 months</td>
+<td>CIO</td>
+<td>CIO documents</td>
+<td>Finance</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-doc">Ratify</span></td>
+</tr>
+<tr>
+<td>A9</td>
+<td>Commercial rules</td>
+<td>Discounts</td>
+<td>Sales Director up to 20%; CEO above; none on minimum or platform fee</td>
+<td>CIO</td>
+<td>CIO documents</td>
+<td>CEO</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-doc">Ratify</span></td>
+</tr>
+<tr>
+<td>A10</td>
+<td>Commercial rules</td>
+<td>Pilot rule</td>
+<td>Fixed fee, fixed end date; full price in contract; fee credited to year 1</td>
+<td>CIO</td>
+<td>CIO documents</td>
+<td>Sales Director</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-doc">Ratify</span></td>
+</tr>
+<tr>
+<td>A11</td>
+<td>Product facts</td>
+<td>Accuracy</td>
+<td>±20 cm, badge on a person, ward with beds and walls</td>
+<td>CIO, Eng.</td>
+<td>CIO documents</td>
+<td>Engineering lead</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-ok">Confirmed</span></td>
+</tr>
+<tr>
+<td>A12</td>
+<td>Product facts</td>
+<td>Update rate</td>
+<td>2 positions each second</td>
+<td>CIO, Eng.</td>
+<td>CIO documents</td>
+<td>Engineering lead</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-ok">Confirmed</span></td>
+</tr>
+<tr>
+<td>A13</td>
+<td>Product facts</td>
+<td>Capacity</td>
+<td>1 anchor serves 8 tags at one time</td>
+<td>CIO, Eng.</td>
+<td>CIO documents</td>
+<td>Engineering lead</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-ok">Confirmed</span></td>
+</tr>
+<tr>
+<td>A14</td>
+<td>Product facts</td>
+<td>Staff badge</td>
+<td>Charge each week (2-week test in progress); not for equipment</td>
+<td>CIO, Eng.</td>
+<td>CIO documents</td>
+<td>Engineering lead</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-ok">Confirmed</span></td>
+</tr>
+<tr>
+<td>A15</td>
+<td>Product facts</td>
+<td>Limits</td>
+<td>Not medical grade; no help button on the badge</td>
+<td>CIO</td>
+<td>CIO documents</td>
+<td>Engineering lead</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-doc">Ratify</span></td>
+</tr>
+<tr>
+<td>A16</td>
+<td>Product facts</td>
+<td>Radio</td>
+<td>UWB channel 9; Singapore approved; Japan needs 技適 per device</td>
+<td>CIO, JC</td>
+<td>CIO documents</td>
+<td>Hardware and supply chain</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-warn">To verify</span></td>
+</tr>
+<tr>
+<td>A17</td>
+<td>Product facts</td>
+<td>Hardened kit</td>
+<td>Cost 2× standard; not tested by Engineering</td>
+<td>Mine</td>
+<td>Claude (proposed)</td>
+<td>Engineering lead</td>
+<td><span class="pill p-bad">Guessing</span></td>
+<td><span class="pill p-warn">To verify</span></td>
+</tr>
+<tr>
+<td>A18</td>
+<td>Product facts</td>
+<td>Gate speed</td>
+<td>40 people a minute, decision in 200 ms; not tested with the 8-tag limit</td>
+<td>Map, mine</td>
+<td>Product map + Claude</td>
+<td>Engineering lead</td>
+<td><span class="pill p-bad">Guessing</span></td>
+<td><span class="pill p-warn">To verify</span></td>
+</tr>
+<tr>
+<td>A19</td>
+<td>Product facts</td>
+<td>Phones per anchor</td>
+<td>Number of passenger phones one anchor serves: not confirmed</td>
+<td>Mine</td>
+<td>Claude (proposed)</td>
+<td>Engineering lead</td>
+<td><span class="pill p-bad">Guessing</span></td>
+<td><span class="pill p-warn">To verify</span></td>
+</tr>
+<tr>
+<td>A20</td>
+<td>Product facts</td>
+<td>Supply</td>
+<td>Lead time 3 months; MOQ 50 anchors / 100 tags; 1-year warranty; 2% spares</td>
+<td>JC</td>
+<td>JC</td>
+<td>Hardware and supply chain</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-doc">Ratify</span></td>
+</tr>
+<tr>
+<td>A21</td>
+<td>Prices by product</td>
+<td>Ward software</td>
+<td>S$450 per bed per year</td>
+<td>CIO</td>
+<td>CIO documents</td>
+<td>Sales Director</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-warn">To verify</span></td>
+</tr>
+<tr>
+<td>A22</td>
+<td>Prices by product</td>
+<td>Ward hardware</td>
+<td>S$30 per bed per month in bays; S$60 in 1–2 bed rooms; 1 tag per bed</td>
+<td>CIO</td>
+<td>CIO documents</td>
+<td>Sales Director, Finance</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-doc">Ratify</span></td>
+</tr>
+<tr>
+<td>A23</td>
+<td>Prices by product</td>
+<td>Extra tags</td>
+<td>S$800 for 10; hardened S$1,600 for 10</td>
+<td>CIO, mine</td>
+<td>CIO documents + Claude</td>
+<td>Sales Director</td>
+<td><span class="pill p-warn">Likely</span></td>
+<td><span class="pill p-doc">Ratify</span></td>
+</tr>
+<tr>
+<td>A24</td>
+<td>Prices by product</td>
+<td>Ward pilot</td>
+<td>1 ward, up to 40 beds, 90 days, S$40,000</td>
+<td>CIO</td>
+<td>CIO documents</td>
+<td>Sales Director</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-doc">Ratify</span></td>
+</tr>
+<tr>
+<td>A25</td>
+<td>Prices by product</td>
+<td>Operations RTLS</td>
+<td>S$9,000 per 1,000 m² a year; S$250 (hardened S$500) a month; 8 anchors, 40 tags</td>
+<td>Mine</td>
+<td>Claude (proposed)</td>
+<td>Product lead (JC), Sales Director</td>
+<td><span class="pill p-bad">Guessing</span></td>
+<td><span class="pill p-bad">For decision</span></td>
+</tr>
+<tr>
+<td>A26</td>
+<td>Prices by product</td>
+<td>Flow</td>
+<td>S$12,000 per 1,000 m² a year; S$250 a month; 8 anchors, 40 staff tags</td>
+<td>Mine</td>
+<td>Claude (proposed)</td>
+<td>Product lead (JC), Sales Director</td>
+<td><span class="pill p-bad">Guessing</span></td>
+<td><span class="pill p-bad">For decision</span></td>
+</tr>
+<tr>
+<td>A27</td>
+<td>Prices by product</td>
+<td>Gates</td>
+<td>S$400 per gate a year; S$30 a month; 2 hardened anchors per gate</td>
+<td>Mine</td>
+<td>Claude (proposed)</td>
+<td>Product lead (JC), Sales Director</td>
+<td><span class="pill p-bad">Guessing</span></td>
+<td><span class="pill p-bad">For decision</span></td>
+</tr>
+<tr>
+<td>A28</td>
+<td>Prices by product</td>
+<td>Other pilots</td>
+<td>Ops S$25,000 (hardened S$35,000); Flow S$60,000; Gates S$120,000; study S$28,000</td>
+<td>Mine</td>
+<td>Claude (proposed)</td>
+<td>Sales Director</td>
+<td><span class="pill p-bad">Guessing</span></td>
+<td><span class="pill p-bad">For decision</span></td>
+</tr>
+<tr>
+<td>A29</td>
+<td>Prices by product</td>
+<td>Set-up rates</td>
+<td>Survey S$6,000; S$200 per anchor (hardened S$400); S$1,400 per engineer-day</td>
+<td>CIO, JC, mine</td>
+<td>CIO documents + Claude</td>
+<td>Service team lead</td>
+<td><span class="pill p-warn">Likely</span></td>
+<td><span class="pill p-warn">To verify</span></td>
+</tr>
+<tr>
+<td>A30</td>
+<td>Prices by product</td>
+<td>NXP licence</td>
+<td>S$32,000–58,000 a year</td>
+<td>JC</td>
+<td>JC</td>
+<td>BD lead</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-doc">Ratify</span></td>
+</tr>
+</tbody>
+</table></div>
+<h3>Costs, market and sales (A31–A50)</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Area</th>
+<th>Assumption</th>
+<th>Value used</th>
+<th>Source</th>
+<th>Stood in</th>
+<th>Should own</th>
+<th>Confidence</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A31</td>
+<td>Costs</td>
+<td>Hardware cost</td>
+<td>Anchor S$100; tag S$40</td>
+<td>CIO</td>
+<td>CIO documents</td>
+<td>Hardware and supply chain, Finance</td>
+<td><span class="pill p-warn">Likely</span></td>
+<td><span class="pill p-warn">To verify</span></td>
+</tr>
+<tr>
+<td>A32</td>
+<td>Costs</td>
+<td>Install cost</td>
+<td>S$600 a day; 6 anchors a day (3 hardened): S$100 / S$200 per anchor</td>
+<td>JC</td>
+<td>JC</td>
+<td>Service team lead</td>
+<td><span class="pill p-warn">Likely</span></td>
+<td><span class="pill p-warn">To verify</span></td>
+</tr>
+<tr>
+<td>A33</td>
+<td>Costs</td>
+<td>Engineer-day cost</td>
+<td>S$700 (US$550)</td>
+<td>JC</td>
+<td>JC</td>
+<td>Finance</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-doc">Ratify</span></td>
+</tr>
+<tr>
+<td>A34</td>
+<td>Costs</td>
+<td>Cloud site</td>
+<td>S$3,200 a month: backend S$2,000 + support S$1,200</td>
+<td>CIO</td>
+<td>CIO documents</td>
+<td>CIO, Finance</td>
+<td><span class="pill p-warn">Likely</span></td>
+<td><span class="pill p-warn">To verify</span></td>
+</tr>
+<tr>
+<td>A35</td>
+<td>Costs</td>
+<td>Self-hosted</td>
+<td>S$86,600 a year: Solace S$65,000 + support S$21,600</td>
+<td>CIO</td>
+<td>CIO documents</td>
+<td>CIO, Finance</td>
+<td><span class="pill p-warn">Likely</span></td>
+<td><span class="pill p-warn">To verify</span></td>
+</tr>
+<tr>
+<td>A36</td>
+<td>Costs</td>
+<td>Spares, repairs</td>
+<td>10% of hardware cost each year</td>
+<td>CIO</td>
+<td>CIO documents</td>
+<td>Finance</td>
+<td><span class="pill p-bad">Guessing</span></td>
+<td><span class="pill p-warn">To verify</span></td>
+</tr>
+<tr>
+<td>A37</td>
+<td>Costs</td>
+<td>AI questions</td>
+<td>S$0.10 each; 30 per bed per month on cloud Ward</td>
+<td>CIO</td>
+<td>CIO documents</td>
+<td>CIO</td>
+<td><span class="pill p-bad">Guessing</span></td>
+<td><span class="pill p-warn">To verify</span></td>
+</tr>
+<tr>
+<td>A38</td>
+<td>Costs</td>
+<td>24/7 support</td>
+<td>S$93,000 a year for each Flow or Gates account</td>
+<td>Mine</td>
+<td>Claude (proposed)</td>
+<td>Support lead, CEO</td>
+<td><span class="pill p-bad">Guessing</span></td>
+<td><span class="pill p-bad">For decision</span></td>
+</tr>
+<tr>
+<td>A39</td>
+<td>Costs</td>
+<td>Ward pilot cost</td>
+<td>S$21,700: box S$6,100, support S$3,600, survey and set-up S$12,000</td>
+<td>CIO</td>
+<td>CIO documents</td>
+<td>Finance</td>
+<td><span class="pill p-warn">Likely</span></td>
+<td><span class="pill p-doc">Ratify</span></td>
+</tr>
+<tr>
+<td>A40</td>
+<td>Costs</td>
+<td>Pilot pool</td>
+<td>50 + 10 hardened anchors, 200 tags: about S$15,000</td>
+<td>JC, CIO</td>
+<td>JC</td>
+<td>Hardware and supply chain</td>
+<td><span class="pill p-warn">Likely</span></td>
+<td><span class="pill p-doc">Ratify</span></td>
+</tr>
+<tr>
+<td>A41</td>
+<td>Market, funnel and sales</td>
+<td>Healthcare market</td>
+<td>Singapore S$12.9M a year (FY28); Japan about S$249M</td>
+<td>CIO (MOH, MHLW)</td>
+<td>CIO documents</td>
+<td>Product lead (JC)</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-ok">Confirmed</span></td>
+</tr>
+<tr>
+<td>A42</td>
+<td>Market, funnel and sales</td>
+<td>Japan healthcare</td>
+<td>Self-hosted only (MHLW guideline)</td>
+<td>CIO</td>
+<td>CIO documents</td>
+<td>CIO</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-ok">Confirmed</span></td>
+</tr>
+<tr>
+<td>A43</td>
+<td>Market, funnel and sales</td>
+<td>Markets, accounts</td>
+<td>From the product map; TTSH, LTA, CAG in pursuit</td>
+<td>Map</td>
+<td>Product map</td>
+<td>Product lead (JC), Sales Director</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-doc">Ratify</span></td>
+</tr>
+<tr>
+<td>A44</td>
+<td>Market, funnel and sales</td>
+<td>Other markets</td>
+<td>No market size or competitor research yet (stage 3)</td>
+<td>—</td>
+<td>—</td>
+<td>Product lead (JC)</td>
+<td><span class="pill p-bad">Guessing</span></td>
+<td><span class="pill p-bad">Open</span></td>
+</tr>
+<tr>
+<td>A45</td>
+<td>Market, funnel and sales</td>
+<td>Funnel</td>
+<td>Pass rates 40/60/50/80/70%; ~15 first meetings per win; stage times</td>
+<td>Mine</td>
+<td>Claude (proposed)</td>
+<td>Sales Director</td>
+<td><span class="pill p-bad">Guessing</span></td>
+<td><span class="pill p-warn">Proposed</span></td>
+</tr>
+<tr>
+<td>A46</td>
+<td>Market, funnel and sales</td>
+<td>Marketing</td>
+<td>S$12,800 per win; about S$154,000 a year</td>
+<td>Mine</td>
+<td>Claude (proposed)</td>
+<td>Marketing lead</td>
+<td><span class="pill p-bad">Guessing</span></td>
+<td><span class="pill p-warn">Proposed</span></td>
+</tr>
+<tr>
+<td>A47</td>
+<td>Market, funnel and sales</td>
+<td>Sales effort</td>
+<td>S$1,540 a day; 8–40 days per deal</td>
+<td>Mine</td>
+<td>Claude (proposed)</td>
+<td>Sales Director, Finance</td>
+<td><span class="pill p-bad">Guessing</span></td>
+<td><span class="pill p-warn">Proposed</span></td>
+</tr>
+<tr>
+<td>A48</td>
+<td>Market, funnel and sales</td>
+<td>Commission</td>
+<td>10% of year-1 recurring revenue; profit-based plan optional</td>
+<td>SaaStr</td>
+<td>SaaStr</td>
+<td>CEO, Finance</td>
+<td><span class="pill p-warn">Likely</span></td>
+<td><span class="pill p-bad">For decision</span></td>
+</tr>
+<tr>
+<td>A49</td>
+<td>Market, funnel and sales</td>
+<td>Staffing</td>
+<td>About 23 FTE; core team of 7; hiring triggers</td>
+<td>JC, mine</td>
+<td>JC + Claude</td>
+<td>CEO, HR</td>
+<td><span class="pill p-warn">Likely</span></td>
+<td><span class="pill p-warn">To verify</span></td>
+</tr>
+<tr>
+<td>A50</td>
+<td>Market, funnel and sales</td>
+<td>Support salaries</td>
+<td>L1/L2 S$70,000–130,000</td>
+<td>Morgan McKinley 2026</td>
+<td>Morgan McKinley 2026</td>
+<td>HR</td>
+<td><span class="pill p-ok">Certain</span></td>
+<td><span class="pill p-doc">Benchmark</span></td>
+</tr>
+</tbody>
+</table></div><h2>Superseded inputs</h2>
+<p>Thirteen earlier inputs were replaced when the product map (7 Oct) and the CIO documents (3 Oct, used from 7 Oct) arrived. The earlier figures stay in the deck's version history; do not quote them.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Earlier input (version)</th>
+<th>Given by</th>
+<th>Replaced by</th>
+<th>Owner to confirm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accuracy</td>
+<td>~150 cm design target (v0.8); ~10 cm (map, v0.9)</td>
+<td>JC; product map</td>
+<td>±20 cm for the staff badge, Engineering-confirmed</td>
+<td>Engineering lead</td>
+</tr>
+<tr>
+<td>Hardware cost</td>
+<td>Anchor US$200, tag US$30 (v0.3)</td>
+<td>JC for Hardware</td>
+<td>Anchor S$100, tag S$40</td>
+<td>Hardware and supply chain</td>
+</tr>
+<tr>
+<td>Hardware model</td>
+<td>Sale at 50% / 30% margin; HaaS optional (v0.3)</td>
+<td>JC for Finance</td>
+<td>Monthly hardware service; STYL owns it</td>
+<td>Finance, CIO</td>
+</tr>
+<tr>
+<td>Software price</td>
+<td>Core / Operate / Sovereign bands + per-device fee (v0.3)</td>
+<td>JC for Sales Director</td>
+<td>One package per product, price per buyer unit</td>
+<td>CIO, Sales Director</td>
+</tr>
+<tr>
+<td>Edge server</td>
+<td>Sold at US$61,400, 30% margin (v0.8)</td>
+<td>JC for Hardware</td>
+<td>Customer provides servers to our specification</td>
+<td>CIO</td>
+</tr>
+<tr>
+<td>Installation</td>
+<td>10-man-day package per site (v0.8)</td>
+<td>JC for Service team</td>
+<td>Site survey + price per anchor</td>
+<td>Service team lead</td>
+</tr>
+<tr>
+<td>Pilot installation</td>
+<td>10-day package, credited (A52, v0.8)</td>
+<td>Claude</td>
+<td>Inside the fixed pilot fee</td>
+<td>Sales Director</td>
+</tr>
+<tr>
+<td>Margin rule</td>
+<td>45% floor per deal (v0.3)</td>
+<td>JC for Finance</td>
+<td>30% floor per quote; 40% target over 24 months</td>
+<td>Finance</td>
+</tr>
+<tr>
+<td>Discounts</td>
+<td>Volume and term bands (v0.3)</td>
+<td>Claude</td>
+<td>One list price; Sales Director 20%, CEO above</td>
+<td>CEO</td>
+</tr>
+<tr>
+<td>Pilot</td>
+<td>Licence + services; loan server S$3,000 a month (v0.3)</td>
+<td>JC for Sales Director</td>
+<td>Fixed fee, 90 days, Atlantic-in-a-box, credited</td>
+<td>Sales Director</td>
+</tr>
+<tr>
+<td>Battery</td>
+<td>~3 months, customer replaces (v0.3)</td>
+<td>JC for Engineering</td>
+<td>Badge: charge each week</td>
+<td>Engineering lead</td>
+</tr>
+<tr>
+<td>Healthcare hosting</td>
+<td>On-prem only (map, v0.9)</td>
+<td>Product map</td>
+<td>Customer chooses; Japan self-hosted only</td>
+<td>CIO</td>
+</tr>
+<tr>
+<td>Currency</td>
+<td>USD (v0.1–v0.9)</td>
+<td>JC for Finance</td>
+<td>SGD before GST</td>
+<td>Finance</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Decisions still open</h2>
+<p>Ten decisions are needed before a non-hospital quote goes out; the first five are the five decisions in the deck.</p>
+<ul>
+<li>☐ <strong>Adopt the CIO framework for every UWB product</strong> (D12, D13, D21). Owner: CIO, with CEO sign-off.</li>
+<li>☐ <strong>Approve the price basis:</strong> Ward from the CIO sheet; Operations, Flow and Gates for pilots only (D16, A3, A25–A28). Owner: Sales Director and Finance.</li>
+<li>☐ <strong>Order the pilot pool</strong>, about S$15,000, 3-month lead time (D6, A40). Owner: CEO for budget, Hardware and supply chain to order.</li>
+<li>☐ <strong>Approve the core team of 7 and the hiring triggers</strong> (D8, A49). Owner: CEO, with HR.</li>
+<li>☐ <strong>Name an owner to release each product sheet</strong> (stage 6 sign-offs: Engineering, Sales Director, Finance, CIO). Owner: CIO.</li>
+<li>☐ <strong>Run the Engineering tests:</strong> gate throughput, phones per anchor, hardened kit, tag density above 64 per 1,000 m² (A13, A17–A19). Owner: Engineering lead.</li>
+<li>☐ <strong>Decide the 24/7 support rota and its cost</strong> for Flow and Gates (A38). Owner: Support lead, with CEO.</li>
+<li>☐ <strong>Confirm payment terms:</strong> software yearly in advance, set-up net 30 (A7). Owner: Finance.</li>
+<li>☐ <strong>Decide on the profit-based commission plan</strong> (D7, A48). Owner: CEO and Finance.</li>
+<li>☐ <strong>Add a reference and case-study clause to every pilot contract.</strong> Owner: Sales Director, with Legal.</li>
+</ul>
+<h2>Related documents</h2>
+<ul>
+<li><a href="Atlantic_UWB_GTM_Plan_v0.10_2026-10-07.html">GTM plan deck v0.10</a>: slides 51–56 hold the same register.</li>
+<li><a href="Atlantic_Product_Market_Customer_Map.html">Atlantic Product–Market–Customer Map</a>: the home of the GTM package.</li>
+<li><a href="Atlantic_UWB_GTM_CONTEXT_v0.10_2026-10-07.html">Handover context file</a>: sources, conventions and version history.</li>
+<li>CIO Office, STYL Product Sheet Process Guide v1.0 (3 Oct 2026): the framework behind D12–D15 and D18.</li>
+</ul><p class="foot">STYL Solutions · Internal · Preliminary · do not send to customers</p></div></body></html>

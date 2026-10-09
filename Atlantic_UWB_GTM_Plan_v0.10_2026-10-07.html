@@ -1,0 +1,1068 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Atlantic GTM Plan v0.10</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#2a2d31;--bar:#202124;--ink:#f1f3f4;--muted:#bdc1c6;--link:#8ab4f8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Onest,Arial,sans-serif}
+.bar{position:sticky;top:0;z-index:5;background:var(--bar);display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;padding:12px 20px;font-size:14px}
+.bar b{font-size:15px}.bar a{color:var(--link);font-weight:600;text-decoration:none}.bar a:hover{text-decoration:underline}
+.bar span{color:var(--muted)}
+.deck{max-width:1280px;margin:0 auto;padding:24px 16px 60px;display:grid;gap:28px}
+.slide{display:grid;gap:8px}.num{font-size:12px;color:var(--muted);letter-spacing:.1em}
+.frame{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.35);background:#fff}
+.frame>section{position:absolute!important;top:0;left:0;width:1920px;height:1080px;transform-origin:0 0;box-sizing:border-box}
+.frame *{margin:0;box-sizing:border-box}
+.frame table{border-collapse:collapse;width:100%}.frame td,.frame th{text-align:left;padding:6px 12px;border-bottom:1px solid #dadce0}
+.frame ul{padding-left:1.2em}
+.notes{color:var(--muted);font-size:14px}.notes summary{cursor:pointer}.notes p{max-width:90ch;line-height:1.5}
+</style></head><body>
+<div class="bar"><b>Atlantic UWB GTM Plan · v0.10 · 7 Oct 2026</b><span>59 slides · Preliminary, internal</span><a href="Atlantic_Product_Market_Customer_Map.html">← Product map</a><a href="Atlantic_UWB_GTM_Register_v0.10_2026-10-09.html">Register</a><a href="Atlantic_UWB_GTM_CONTEXT_v0.10_2026-10-07.html">Context file</a></div>
+<div class="deck"><div class="slide" id="s1"><div class="num">01</div><div class="frame"><section id="cover" data-transition="fade" style="background:#202124;color:#f8f9fa;font-family:'Onest', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<div style="display:flex;flex-direction:column;gap:32px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#6099ff">STYL Solutions · Product &amp; vertical owner</p>
+<h1 style="font-size:96px;font-weight:600;line-height:1.1;color:#f8f9fa">Atlantic UWB: go-to-market execution plan</h1>
+<p style="font-size:36px;line-height:1.4;color:#dadce0;width:1300px">How we sell Precision RTLS, Flow &amp; Wayfinding and Hands-free Gates on Atlantic: one price framework, seven worked examples, and the decisions we need today.</p>
+</div>
+<div style="display:flex;flex-direction:row;align-items:center;justify-content:space-between">
+<p style="font-size:28px;font-weight:600;background:#ffab00;color:#202124;padding:16px 28px;border-radius:9999px">Preliminary: internal discussion, not for customers</p>
+<p style="font-size:28px;color:#dadce0">JC · v0.10 · 7 October 2026</p>
+</div>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>I present this plan as product and vertical owner for Atlantic UWB. The plan is preliminary. Version 0.10 uses the CIO framework for product sheets: each product has one price unit, three price parts and a fixed-fee pilot. Every figure traces to an item in the assumptions register at the end. Today we need five decisions, on slide 3.</p></details></div><div class="slide" id="s2"><div class="num">02</div><div class="frame"><section id="exec-summary" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Executive summary</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">How we sell Atlantic UWB products, and what they earn</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:6px;background:#f1f3f4;padding:22px 26px;border-radius:16px"><p style="font-size:32px;font-weight:600;color:#0080ff">01</p><h3 style="font-size:28px;font-weight:600">Strategy and products</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">The product map, one framework, the status of each product</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#f1f3f4;padding:22px 26px;border-radius:16px"><p style="font-size:32px;font-weight:600;color:#0080ff">02</p><h3 style="font-size:28px;font-weight:600">Markets</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">Map markets, named accounts, the healthcare market</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#f1f3f4;padding:22px 26px;border-radius:16px"><p style="font-size:32px;font-weight:600;color:#0080ff">03</p><h3 style="font-size:28px;font-weight:600">Framework and teams</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">Eight gated stages, 6–17 months to PO, the teams</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#f1f3f4;padding:22px 26px;border-radius:16px"><p style="font-size:32px;font-weight:600;color:#0080ff">04</p><h3 style="font-size:28px;font-weight:600">Prices</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">One formula: software + hardware service + set-up</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#f1f3f4;padding:22px 26px;border-radius:16px"><p style="font-size:32px;font-weight:600;color:#0080ff">05</p><h3 style="font-size:28px;font-weight:600">Costs</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">Hardware, delivery, run costs, commission</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#f1f3f4;padding:22px 26px;border-radius:16px"><p style="font-size:32px;font-weight:600;color:#0080ff">06</p><h3 style="font-size:28px;font-weight:600">Examples</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">Seven worked deals with breakeven and return</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#f1f3f4;padding:22px 26px;border-radius:16px"><p style="font-size:32px;font-weight:600;color:#0080ff">07</p><h3 style="font-size:28px;font-weight:600">Margins and checks</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">30% floor, 40% target, stress test, benchmark</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#f1f3f4;padding:22px 26px;border-radius:16px"><p style="font-size:32px;font-weight:600;color:#0080ff">08</p><h3 style="font-size:28px;font-weight:600">To finalise</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">50 assumptions with confidence tags, 12 open items</p></div>
+</div>
+<div style="display:grid;grid-template-columns:1.3fr 1fr;gap:20px">
+<div style="background:#e6f2ff;padding:22px 28px;border-radius:16px;font-size:26px;line-height:1.4"><p><span style="font-weight:600">The headline:</span> every example passes the 30% margin floor. Return on cost is 39–227% over 3 years. Breakeven is about 4 months after the PO.</p></div>
+<div style="background:#202124;color:#f8f9fa;padding:22px 28px;border-radius:16px;font-size:26px;line-height:1.4"><p><span style="font-weight:600">What we need from you:</span> five decisions, on the next slide.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 02</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>The deck has eight sections. They follow the order of the business decision: what we sell, to whom, how, at what price and cost, what a real deal gives, and what is still open. All prices are in Singapore dollars before GST. Version 0.10 applies the CIO product-sheet framework to every UWB product.</p></details></div><div class="slide" id="s3"><div class="num">03</div><div class="frame"><section id="ask" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">What we need today</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Five decisions to start selling</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;flex-direction:row;gap:28px;align-items:flex-start;background:#f1f3f4;padding:20px 28px;border-radius:16px"><p style="font-size:48px;font-weight:600;color:#0080ff;line-height:1;width:48px">1</p><div style="display:flex;flex-direction:column;gap:6px"><h3 style="font-size:30px;font-weight:600">Adopt the CIO framework for every UWB product</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">One price unit that the buyer budgets in. Three parts: software, hardware service, set-up. No quote below 30% gross margin.</p></div></div>
+<div style="display:flex;flex-direction:row;gap:28px;align-items:flex-start;background:#f1f3f4;padding:20px 28px;border-radius:16px"><p style="font-size:48px;font-weight:600;color:#0080ff;line-height:1;width:48px">2</p><div style="display:flex;flex-direction:column;gap:6px"><h3 style="font-size:30px;font-weight:600">Approve the price basis</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">Ward prices from the CIO sheet. Proposed prices for Operations RTLS, Flow and Gates: use them for pilots only, until each product sheet is released.</p></div></div>
+<div style="display:flex;flex-direction:row;gap:28px;align-items:flex-start;background:#f1f3f4;padding:20px 28px;border-radius:16px"><p style="font-size:48px;font-weight:600;color:#0080ff;line-height:1;width:48px">3</p><div style="display:flex;flex-direction:column;gap:6px"><h3 style="font-size:30px;font-weight:600">Order the pilot pool now</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">50 standard and 10 hardened anchors, 200 tags. Cost about S$15,000. Delivery takes 3 months.</p></div></div>
+<div style="display:flex;flex-direction:row;gap:28px;align-items:flex-start;background:#f1f3f4;padding:20px 28px;border-radius:16px"><p style="font-size:48px;font-weight:600;color:#0080ff;line-height:1;width:48px">4</p><div style="display:flex;flex-direction:column;gap:6px"><h3 style="font-size:30px;font-weight:600">Approve the core team and hiring triggers</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">A dedicated team of about 7 people. Other hires start when pipeline and pilot load go above agreed limits.</p></div></div>
+<div style="display:flex;flex-direction:row;gap:28px;align-items:flex-start;background:#f1f3f4;padding:20px 28px;border-radius:16px"><p style="font-size:48px;font-weight:600;color:#0080ff;line-height:1;width:48px">5</p><div style="display:flex;flex-direction:column;gap:6px"><h3 style="font-size:30px;font-weight:600">Assign owners</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">A Sales Sheet and a Product Team Brief for each of Operations RTLS, Flow and Gates. Owners for the 12 open items. A reference clause in every pilot contract.</p></div></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 03</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Start with the decisions. The rest of the deck is the evidence. Decision 3 has the most time pressure: hardware takes 3 months from the order, so each week of delay moves the first pilot back by one week. Decision 2 keeps the risk small: only Ward has a released price. The other three prices are proposals, and we use them only for pilots.</p></details></div><div class="slide" id="s4"><div class="num">04</div><div class="frame"><section id="summary" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">The plan in one view</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">One framework, four products, seven examples</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:10px;background:#f1f3f4;padding:28px 32px;border-radius:16px"><p style="font-size:56px;font-weight:600;color:#0080ff;line-height:1.1">4 + 1</p><p style="font-size:26px;line-height:1.4">UWB products on one price framework, plus Simulate to size each site</p></div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#f1f3f4;padding:28px 32px;border-radius:16px"><p style="font-size:56px;font-weight:600;color:#0080ff;line-height:1.1">6–17 mo</p><p style="font-size:26px;line-height:1.4">From first meeting to purchase order (manufacturing to transit)</p></div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#f1f3f4;padding:28px 32px;border-radius:16px"><p style="font-size:56px;font-weight:600;color:#0080ff;line-height:1.1">S$25–120K</p><p style="font-size:26px;line-height:1.4">Fixed-fee pilot. The fee goes to year 1 if the customer buys</p></div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#f1f3f4;padding:28px 32px;border-radius:16px"><p style="font-size:56px;font-weight:600;color:#0080ff;line-height:1.1">S$120K–1.22M</p><p style="font-size:26px;line-height:1.4">Year-1 value of each worked example</p></div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#f1f3f4;padding:28px 32px;border-radius:16px"><p style="font-size:56px;font-weight:600;color:#0080ff;line-height:1.1">39–227%</p><p style="font-size:26px;line-height:1.4">3-year return on STYL cost. Gross margin 39–76% before sales cost</p></div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#f1f3f4;padding:28px 32px;border-radius:16px"><p style="font-size:56px;font-weight:600;color:#0080ff;line-height:1.1">~4 months</p><p style="font-size:26px;line-height:1.4">From purchase order to breakeven on each deal</p></div>
+</div>
+<p style="font-size:26px;line-height:1.4;color:#5f6368">All figures are preliminary, in SGD before GST. Singapore first; Japan for self-hosted sites. We hold radio approval in both.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 04</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Six numbers carry the plan. Return on cost covers the pilot and 36 months of contract, including sales and marketing cost. Gross margin is before sales cost. Hardware is now a monthly service, so STYL buys the hardware. Our anchors and tags cost little, so the cash out stays small.</p></details></div><div class="slide" id="s5"><div class="num">05</div><div class="frame"><section id="div-1" data-transition="fade" style="background:#202124;color:#f8f9fa;font-family:'Onest', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<p style="font-size:120px;font-weight:600;color:#6099ff;line-height:1.1">01</p>
+<h2 style="font-size:80px;font-weight:600;line-height:1.1;color:#f8f9fa">Strategy and products</h2>
+<p style="font-size:36px;line-height:1.4;color:#dadce0;width:1400px">How we position Atlantic, the products we sell on it, and one framework to make each product ready to sell</p>
+</section>
+</div></div><div class="slide" id="s6"><div class="num">06</div><div class="frame"><section id="strategy" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Strategy</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Three reasons customers buy from STYL</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:24px 28px;border-radius:16px"><h3 style="font-size:30px;font-weight:600">1 · Accurate to the bed</h3><p style="font-size:24px;line-height:1.4;color:#5f6368">Accuracy is ±20 cm. Most other systems show only the room. We show which bed, gate or bay.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:24px 28px;border-radius:16px"><h3 style="font-size:30px;font-weight:600">2 · Cloud or self-hosted</h3><p style="font-size:24px;line-height:1.4;color:#5f6368">STYL cloud in Singapore, or fully inside the customer data centre. The customer chooses.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:24px 28px;border-radius:16px"><h3 style="font-size:30px;font-weight:600">3 · Works with current systems</h3><p style="font-size:24px;line-height:1.4;color:#5f6368">Atlantic operates alongside Wi-Fi, RFID and nurse call. It also uses data from other location systems.</p></div>
+</div>
+<h3 style="font-size:30px;font-weight:600">Where we play, in this sequence</h3>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:8px 12px">
+<tr style="background:#f1f3f4"><th style="width:14%">When</th><th style="width:58%">Market and product</th><th style="width:28%">Accounts</th></tr>
+<tr><td><span style="font-weight:600">Now</span></td><td>Healthcare with Precision RTLS Ward; airport terminals with Flow &amp; Wayfinding</td><td>TTSH; CAG</td></tr>
+<tr><td><span style="font-weight:600">Next</span></td><td>Transit with Hands-free Gates; airport cargo and civic estates with Operations RTLS</td><td>LTA; SATS, dnata; MOE via DBS</td></tr>
+<tr><td><span style="font-weight:600">Later</span></td><td>Manufacturing and industrial safety, outside the product map</td><td>To validate</td></tr>
+<tr><td><span style="font-weight:600">Not UWB</span></td><td>Retail and environment open with Device Ops, Occupancy or Sensing</td><td>Not priced here</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 06</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>The three reasons come from the CIO Ward sales sheet. Each reason must be true, provable and different from the competitors. The ±20 cm figure is for the staff badge, confirmed by Engineering. Do not quote it for hardened kit or for phones until Engineering confirms those (A17, A19).</p></details></div><div class="slide" id="s7"><div class="num">07</div><div class="frame"><section id="products" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Strategy · The Atlantic product map</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Atlantic is the platform. We sell seven products on it.</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#ffffff;border:3px solid #0080ff;padding:22px 24px;border-radius:16px"><h3 style="font-size:30px;font-weight:600">Precision RTLS</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">Staff and equipment location to ±20 cm</p><p style="font-size:24px;font-weight:600;color:#005bb6;background:#e6f2ff;padding:6px 14px;border-radius:9999px">Lead · Ward sheet v1.0</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#ffffff;border:2px solid #dadce0;padding:22px 24px;border-radius:16px"><h3 style="font-size:30px;font-weight:600">Hands-free Gates</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">UWB fare check at gates and on buses</p><p style="font-size:24px;font-weight:600;color:#005bb6;background:#e6f2ff;padding:6px 14px;border-radius:9999px">UWB · proposal</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#ffffff;border:2px solid #dadce0;padding:22px 24px;border-radius:16px"><h3 style="font-size:30px;font-weight:600">Flow &amp; Wayfinding</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">Crowds, indoor guidance, time to gate</p><p style="font-size:24px;font-weight:600;color:#005bb6;background:#e6f2ff;padding:6px 14px;border-radius:9999px">UWB · proposal</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#ffffff;border:2px solid #dadce0;padding:22px 24px;border-radius:16px"><h3 style="font-size:30px;font-weight:600">Atlantic Simulate</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">Sizes a site before hardware ships</p><p style="font-size:24px;font-weight:600;color:#005bb6;background:#e6f2ff;padding:6px 14px;border-radius:9999px">Tool · every workshop</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#ffffff;border:2px solid #dadce0;padding:22px 24px;border-radius:16px"><h3 style="font-size:30px;font-weight:600">Occupancy &amp; Space</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">Infrared and beam counts, no cameras</p><p style="font-size:24px;font-weight:600;color:#5f6368;background:#f1f3f4;padding:6px 14px;border-radius:9999px">No UWB · expand later</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#ffffff;border:2px solid #dadce0;padding:22px 24px;border-radius:16px"><h3 style="font-size:30px;font-weight:600">Terminal &amp; Device Ops</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">Health of terminals, kiosks, sensors</p><p style="font-size:24px;font-weight:600;color:#5f6368;background:#f1f3f4;padding:6px 14px;border-radius:9999px">No UWB · expand later</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#ffffff;border:2px solid #dadce0;padding:22px 24px;border-radius:16px"><h3 style="font-size:30px;font-weight:600">Environmental Sensing</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">~4,800 sensors, 7 countries, since 2006</p><p style="font-size:24px;font-weight:600;color:#5f6368;background:#f1f3f4;padding:6px 14px;border-radius:9999px">No UWB · proof of platform</p></div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#202124;padding:22px 24px;border-radius:16px"><h3 style="font-size:30px;font-weight:600;color:#f8f9fa">One platform</h3><p style="font-size:24px;line-height:1.35;color:#dadce0">One login and one data model. Each product that we land opens the others.</p></div>
+</div>
+<p style="font-size:26px;line-height:1.4;color:#5f6368">Precision RTLS has two packages: Ward for hospitals, and Operations for other sites. This deck prices the four UWB items. The other three follow when Atlantic is in.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 07</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Sources: the Atlantic Product–Market–Customer Map and the CIO Precision RTLS sales sheet. Every quote names one product. Ward is the only product with a sales sheet (v1.0 draft for review). Operations RTLS, Flow and Gates use the same framework, but their prices are my proposals. Simulate is not sold alone: it runs in every workshop, and as a paid study for transit.</p></details></div><div class="slide" id="s8"><div class="num">08</div><div class="frame"><section id="prod-matrix" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Strategy · Product × market</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Each market buys a different product first</h2>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:6px 12px">
+<tr style="background:#f1f3f4"><th style="width:22%">Product</th><th style="width:9%">Healthcare</th><th style="width:9%">Transit</th><th style="width:9%">Airport</th><th style="width:9%">Civic</th><th style="width:9%">Retail</th><th style="width:9%">Environ.</th><th style="width:9%">Partners</th><th style="width:15%">This deck</th></tr>
+<tr style="background:#e6f2ff"><td>Precision RTLS</td><td style="text-align:center;font-size:30px;color:#005bb6">●</td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#5f6368">○</td><td style="text-align:center;font-size:30px;color:#5f6368">○</td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#5f6368">○</td><td>Priced</td></tr>
+<tr style="background:#e6f2ff"><td>Hands-free Gates</td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#005bb6">●</td><td style="text-align:center;font-size:30px;color:#5f6368">○</td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#5f6368">○</td><td>Priced</td></tr>
+<tr style="background:#e6f2ff"><td>Flow &amp; Wayfinding</td><td style="text-align:center;font-size:30px;color:#5f6368">○</td><td style="text-align:center;font-size:30px;color:#5f6368">○</td><td style="text-align:center;font-size:30px;color:#005bb6">●</td><td style="text-align:center;font-size:30px;color:#5f6368">○</td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td>Priced</td></tr>
+<tr style="background:#e6f2ff"><td>Simulate</td><td style="text-align:center;font-size:30px;color:#5f6368">○</td><td style="text-align:center;font-size:30px;color:#5f6368">○</td><td style="text-align:center;font-size:30px;color:#5f6368">○</td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#005bb6">●</td><td>Workshop tool</td></tr>
+<tr><td>Occupancy &amp; Space</td><td style="text-align:center;font-size:30px;color:#005bb6">●</td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#5f6368">○</td><td style="text-align:center;font-size:30px;color:#005bb6">●</td><td style="text-align:center;font-size:30px;color:#5f6368">○</td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td>Expand later</td></tr>
+<tr><td>Device Ops</td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#5f6368">○</td><td style="text-align:center;font-size:30px;color:#5f6368">○</td><td style="text-align:center;font-size:30px;color:#005bb6">●</td><td style="text-align:center;font-size:30px;color:#005bb6">●</td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td>Expand later</td></tr>
+<tr><td>Env. Sensing</td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#5f6368">○</td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td style="text-align:center;font-size:30px;color:#005bb6">●</td><td style="text-align:center;font-size:30px;color:#5f6368"></td><td>Expand later</td></tr>
+</table>
+<p style="font-size:26px;line-height:1.4;color:#5f6368">● primary fit: the first offer. ○ secondary fit: it follows. Shaded rows are priced in this deck.</p>
+<p style="font-size:26px;line-height:1.4;background:#e6f2ff;padding:18px 28px;border-radius:12px"><span style="font-weight:600">UWB opens: </span>healthcare with RTLS, transit with Gates, airports with Flow. In civic estates and retail, a product without UWB opens, and UWB follows.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 08</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Read across a row to see where a product goes. Read down a column to see what a market buys first. Each worked example in section 6 names its product. Source: the Atlantic Product–Market–Customer Map.</p></details></div><div class="slide" id="s9"><div class="num">09</div><div class="frame"><section id="uniform" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Strategy · One framework</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">One process makes each product ready to sell</h2>
+<p style="font-size:26px;color:#5f6368">Source: STYL Product Sheet Process Guide v1.0, CIO Office, 3 Oct 2026. Each product gets two documents: a Sales Sheet (what) and a Product Team Brief (why).</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px">
+<div style="display:flex;flex-direction:column;gap:6px;background:#f1f3f4;padding:18px 18px;border-radius:12px;border-top:6px solid #0080ff"><h3 style="font-size:26px;font-weight:600">1 Scope</h3><p style="font-size:22px;color:#5f6368">Gate: Product lead</p></div><div style="display:flex;flex-direction:column;gap:6px;background:#f1f3f4;padding:18px 18px;border-radius:12px;border-top:6px solid #0080ff"><h3 style="font-size:26px;font-weight:600">2 Product facts</h3><p style="font-size:22px;color:#5f6368">Gate: Engineering lead</p></div><div style="display:flex;flex-direction:column;gap:6px;background:#f1f3f4;padding:18px 18px;border-radius:12px;border-top:6px solid #0080ff"><h3 style="font-size:26px;font-weight:600">3 Market and competitors</h3><p style="font-size:22px;color:#5f6368">Gate: Product lead</p></div><div style="display:flex;flex-direction:column;gap:6px;background:#f1f3f4;padding:18px 18px;border-radius:12px;border-top:6px solid #0080ff"><h3 style="font-size:26px;font-weight:600">4 Price</h3><p style="font-size:22px;color:#5f6368">Gate: Sales Director, Finance</p></div><div style="display:flex;flex-direction:column;gap:6px;background:#f1f3f4;padding:18px 18px;border-radius:12px;border-top:6px solid #0080ff"><h3 style="font-size:26px;font-weight:600">5 Write</h3><p style="font-size:22px;color:#5f6368">Gate: Product lead</p></div><div style="display:flex;flex-direction:column;gap:6px;background:#f1f3f4;padding:18px 18px;border-radius:12px;border-top:6px solid #0080ff"><h3 style="font-size:26px;font-weight:600">6 Review and release</h3><p style="font-size:22px;color:#5f6368">Gate: CIO, Sales Director</p></div>
+</div>
+<h3 style="font-size:30px;font-weight:600">Six price rules for every product</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:18px 24px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">1 · Buyer unit</h3><p style="font-size:24px;line-height:1.4;color:#5f6368">Price per bed, gate or site. Not per tag or per login.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:18px 24px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">2 · Three parts</h3><p style="font-size:24px;line-height:1.4;color:#5f6368">Software per unit per year + hardware service per unit per month + set-up.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:18px 24px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">3 · Three packages maximum</h3><p style="font-size:24px;line-height:1.4;color:#5f6368">Mark one package as "start here".</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:18px 24px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">4 · Hardware allowance</h3><p style="font-size:24px;line-height:1.4;color:#5f6368">A fixed number of devices in each unit. Extra devices in packs.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:18px 24px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">5 · Simple changes only</h3><p style="font-size:24px;line-height:1.4;color:#5f6368">Volume bands, self-hosted, contract length. One line each.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:18px 24px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">6 · Paid pilot</h3><p style="font-size:24px;line-height:1.4;color:#5f6368">Fixed fee and end date. Full price written in the pilot contract.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 09</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>This is the uniform framework from the CIO Office. It replaces the per-device subscription bands and the editions that earlier versions used. Each stage has a gate and an approver. If Engineering cannot confirm a claim, the claim does not go into the Sales Sheet. Market and competitor facts carry a confidence tag: Certain, Likely or Guessing. Guessing never goes into a Sales Sheet.</p></details></div><div class="slide" id="s10"><div class="num">10</div><div class="frame"><section id="status" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Strategy · Release status</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Only Ward has a sales sheet today</h2>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:8px 10px">
+<tr style="background:#f1f3f4"><th style="width:26%">Product</th><th style="width:8%">1 Scope</th><th style="width:8%">2 Facts</th><th style="width:8%">3 Market</th><th style="width:8%">4 Price</th><th style="width:8%">5 Write</th><th style="width:8%">6 Release</th><th style="width:26%">Next step</th></tr>
+<tr style="background:#e6f2ff"><td>Precision RTLS · Ward</td><td style="text-align:center;font-size:24px;font-weight:600;color:#1a7f4b">Done</td><td style="text-align:center;font-size:24px;font-weight:600;color:#1a7f4b">Done</td><td style="text-align:center;font-size:24px;font-weight:600;color:#1a7f4b">Done</td><td style="text-align:center;font-size:24px;font-weight:600;color:#1a7f4b">Done</td><td style="text-align:center;font-size:24px;font-weight:600;color:#1a7f4b">Done</td><td style="text-align:center;font-size:24px;font-weight:600;color:#9a6700">Part</td><td>Get sign-offs; test price with 3 hospitals</td></tr>
+<tr><td>Precision RTLS · Operations</td><td style="text-align:center;font-size:24px;font-weight:600;color:#1a7f4b">Done</td><td style="text-align:center;font-size:24px;font-weight:600;color:#9a6700">Part</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">—</td><td style="text-align:center;font-size:24px;font-weight:600;color:#9a6700">Part</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">—</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">—</td><td>Test hardened kit; research markets</td></tr>
+<tr><td>Flow &amp; Wayfinding</td><td style="text-align:center;font-size:24px;font-weight:600;color:#1a7f4b">Done</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">—</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">—</td><td style="text-align:center;font-size:24px;font-weight:600;color:#9a6700">Part</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">—</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">—</td><td>Confirm phones per anchor</td></tr>
+<tr><td>Hands-free Gates</td><td style="text-align:center;font-size:24px;font-weight:600;color:#1a7f4b">Done</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">—</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">—</td><td style="text-align:center;font-size:24px;font-weight:600;color:#9a6700">Part</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">—</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">—</td><td>Confirm gate throughput</td></tr>
+<tr><td>Simulate</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">n/a</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">n/a</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">n/a</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">n/a</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">n/a</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">n/a</td><td>Tool in every workshop; study S$28,000</td></tr>
+<tr><td>Occupancy, Device Ops, Sensing</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">—</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">—</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">—</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">—</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">—</td><td style="text-align:center;font-size:24px;font-weight:600;color:#5f6368">—</td><td>Not started; outside this deck</td></tr>
+</table>
+<p style="font-size:26px;line-height:1.4;color:#5f6368">Done · Part = in progress (in this deck) · — = not started. Stage 4 for Operations, Flow and Gates is my proposal in section 4.</p>
+<p style="font-size:26px;line-height:1.4;background:#e6f2ff;padding:18px 28px;border-radius:12px"><span style="font-weight:600">Rule: </span>until a product passes stage 6, quote it for a pilot only. Write the full price into the pilot contract.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 10</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Ward reached stage 5: the CIO Office wrote the Sales Sheet and the Product Team Brief (v1.0 draft for review, 3 Oct 2026). It needs the sign-offs from the Engineering lead, the Sales Director, Finance and the CIO. The other three UWB products have a scope (this deck) and a price proposal, but no Engineering facts and no market research yet.</p></details></div><div class="slide" id="s11"><div class="num">11</div><div class="frame"><section id="hosting" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Strategy · Packages and host options</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">One package for each product, two ways to host it</h2>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:8px 12px">
+<tr style="background:#f1f3f4"><th style="width:22%"></th><th style="width:39%">Cloud hosted</th><th style="width:39%">Self-hosted</th></tr>
+<tr><td>Who provides servers</td><td>STYL provides servers and GPU</td><td>Customer provides them, to our specification</td></tr>
+<tr><td>Platform fee</td><td>Included</td><td>S$95,000 per deployment per year</td></tr>
+<tr><td>Software updates</td><td>Automatic</td><td>We install them with the customer IT team</td></tr>
+<tr><td>Where we sell it</td><td>Singapore</td><td>Singapore and Japan</td></tr>
+<tr><td>Use it for</td><td>Ward, Operations RTLS</td><td>Ward, Flow, Gates, civic; Japan healthcare always</td></tr>
+</table>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:18px 24px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">Ward</h3><p style="font-size:24px;line-height:1.4;color:#5f6368">Hospitals. "Start here" package. Price per bed.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:18px 24px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">Operations</h3><p style="font-size:24px;line-height:1.4;color:#5f6368">Cargo, estates, plants, sites. Price per 1,000 m².</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:18px 24px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">Flow · Gates</h3><p style="font-size:24px;line-height:1.4;color:#5f6368">Terminals per 1,000 m²; transit per gate. Self-hosted.</p></div>
+</div>
+<p style="font-size:26px;line-height:1.4;color:#5f6368">Core, Operate and Sovereign editions are retired. Hosting is now a choice, not an edition.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 11</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>The CIO sheet sets two ways to host one Ward package. The customer chooses. The platform fee for self-hosted sites pays for the Solace licence and our support (cost S$86,600 a year). In Japan we sell self-hosted only: the MHLW guideline requires the equipment where Japanese law applies. CAG already requires its own data centre, so Flow is self-hosted. A deployment can serve several sites, for example five schools.</p></details></div><div class="slide" id="s12"><div class="num">12</div><div class="frame"><section id="offer" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Strategy · What every quote contains</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Every quote has three parts</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 60px 1fr 60px 1fr;gap:0px;align-items:stretch"><div style="display:flex;flex-direction:column;gap:10px;background:#e6f2ff;padding:28px 32px;border-radius:16px"><h3 style="font-size:32px;font-weight:600">Software</h3><p style="font-size:26px;line-height:1.4">Per unit, per year. Map, search, alerts, reports, unlimited users.</p></div><p style="font-size:64px;font-weight:600;color:#0080ff;text-align:center;align-self:center">+</p><div style="display:flex;flex-direction:column;gap:10px;background:#e6f2ff;padding:28px 32px;border-radius:16px"><h3 style="font-size:32px;font-weight:600">Hardware service</h3><p style="font-size:26px;line-height:1.4">Per unit, per month. Anchors, the tag allowance, spares and repairs.</p></div><p style="font-size:64px;font-weight:600;color:#0080ff;text-align:center;align-self:center">+</p><div style="display:flex;flex-direction:column;gap:10px;background:#e6f2ff;padding:28px 32px;border-radius:16px"><h3 style="font-size:32px;font-weight:600">Set-up</h3><p style="font-size:26px;line-height:1.4">One time. Site survey, installation for each anchor, system links.</p></div></div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:8px 12px">
+<tr style="background:#f1f3f4"><th style="width:45%">Customer situation</th><th style="width:55%">What we supply</th></tr>
+<tr><td>No UWB infrastructure</td><td>All three parts</td></tr>
+<tr><td>Riders or passengers carry UWB phones</td><td>Anchors and staff tags only; phones act as tags</td></tr>
+<tr><td>Owns RFID or other location tags</td><td>Software reads their data; hardware for new areas only</td></tr>
+<tr><td>Wants more devices</td><td>Extra tags in packs: S$800 for 10</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 12</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Three separate parts let us see the margin of each part. STYL owns the hardware and replaces it when it fails. This replaces the earlier choice between hardware sale and Hardware-as-a-Service: hardware is now always a monthly service. Extra tags are a one-time sale in packs.</p></details></div><div class="slide" id="s13"><div class="num">13</div><div class="frame"><section id="div-2" data-transition="fade" style="background:#202124;color:#f8f9fa;font-family:'Onest', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<p style="font-size:120px;font-weight:600;color:#6099ff;line-height:1.1">02</p>
+<h2 style="font-size:80px;font-weight:600;line-height:1.1;color:#f8f9fa">Markets and accounts</h2>
+<p style="font-size:36px;line-height:1.4;color:#dadce0;width:1400px">Product-map markets, named accounts, who buys and why, and the healthcare market in numbers</p>
+</section>
+</div></div><div class="slide" id="s14"><div class="num">14</div><div class="frame"><section id="accounts" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Markets · Named accounts</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Three accounts in pursuit, twenty to validate</h2>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:8px 12px">
+<tr style="background:#f1f3f4"><th style="width:15%">Market</th><th style="width:21%">First product</th><th style="width:40%">Target accounts</th><th style="width:24%">Our worked example</th></tr>
+<tr><td>Healthcare</td><td>Precision RTLS · Ward</td><td><span style="font-weight:600">TTSH ★</span>, NCID, SGH / SingHealth; NUHS (Occupancy); Synapxe, enabler</td><td>TTSH, 500 beds</td></tr>
+<tr><td>Transit</td><td>Hands-free Gates</td><td><span style="font-weight:600">LTA ★</span>, SBS Transit; SMRT, TransitLink (Device Ops)</td><td>LTA, 720 gates</td></tr>
+<tr><td>Airport</td><td>Flow; Operations RTLS</td><td><span style="font-weight:600">CAG ★</span>; SATS, dnata (RTLS)</td><td>CAG terminal; cargo</td></tr>
+<tr><td>Civic &amp; estates</td><td>Device Ops, Occupancy</td><td>HDB, JTC, GovTech</td><td>MOE via DBS (RTLS)</td></tr>
+<tr><td>Retail</td><td>Device Ops, Occupancy</td><td>FairPrice, CapitaLand</td><td>Not priced here</td></tr>
+<tr><td>Environment</td><td>Environmental Sensing</td><td>NParks, NEA, PUB</td><td>Not priced here</td></tr>
+<tr><td>Partners</td><td>Simulate</td><td>NXP, NCS, ST Engineering</td><td>Channel, this section</td></tr>
+</table>
+<p style="font-size:26px;line-height:1.4;color:#5f6368">★ In pursuit: TTSH, LTA, CAG. All other accounts are suggestions. No account is a reference. Do not name an account outside STYL without written consent.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 14</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Accounts come from the product map. TTSH, LTA and CAG come from the whiteboard. The team must validate the others. Our earlier talks with Toppan, Quadrac, Odawara and AIC continue as partner paths, the Japan path and healthcare expansion. For each account the next step is the same: a half-day architecture workshop with operations and security leads, then a one-zone pilot with a written success test.</p></details></div><div class="slide" id="s15"><div class="num">15</div><div class="frame"><section id="segment-diff" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Markets · Who to talk to · 1 of 2</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Each buyer has a different problem</h2>
+</div>
+<table style="font-size:23px;color:#202124;border:1px solid #dadce0;padding:8px 12px">
+<tr style="background:#f1f3f4"><th style="width:20%">Market · product</th><th style="width:20%">Person</th><th style="width:30%">Their problem</th><th style="width:30%">What you say</th></tr>
+<tr><td>Healthcare · Ward</td><td>Director of Nursing</td><td>Too few nurses. Nurses search for equipment.</td><td>"The ward report is ready at shift change."</td></tr>
+<tr><td></td><td>IT and security</td><td>Patient data must stay in the hospital.</td><td>"Our cloud or your data centre: your choice."</td></tr>
+<tr><td>Airport · Flow</td><td>Terminal operations head</td><td>Queues form before staff can act.</td><td>"See the queue before it forms."</td></tr>
+<tr><td>Airport cargo · RTLS</td><td>Ground handler operations</td><td>Staff search for ULDs and vehicles.</td><td>"Find any ULD in under a minute."</td></tr>
+<tr><td>Transit · Gates</td><td>LTA, rail and bus operators</td><td>Gate lines limit the flow of riders.</td><td>"Forty people a minute, no tap."</td></tr>
+<tr><td>Civic · RTLS</td><td>Estate security</td><td>Visitors and assets across many sites.</td><td>"One map for all sites, inside your network."</td></tr>
+<tr><td>Industry · RTLS</td><td>Plant manager, HSE officer</td><td>Staff, forklifts and stock are hard to find.</td><td>"Know who is in the zone, now."</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 15</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>The healthcare rows come from the CIO Ward sheet. The other rows are my drafts in the same format. Each product sheet must test them with real buyers (stage 3). Quoted lines can be natural speech; all other text follows the simplified English rules.</p></details></div><div class="slide" id="s16"><div class="num">16</div><div class="frame"><section id="segment-how" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Markets · How each one buys · 2 of 2</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Product, unit, host and pace for each market</h2>
+</div>
+<table style="font-size:23px;color:#202124;border:1px solid #dadce0;padding:8px 12px">
+<tr style="background:#f1f3f4"><th style="width:15%">Market</th><th style="width:15%">Product</th><th style="width:9%">Unit</th><th style="width:12%">Host</th><th style="width:20%">What sets the pace</th><th style="width:10%">First PO</th><th style="width:10%">Year 1</th><th style="width:9%">3-yr ROI</th></tr>
+<tr><td>Healthcare</td><td>Ward</td><td>Bed</td><td>Self-hosted</td><td>Pilot decides; IT review</td><td>Month 9</td><td>S$544K</td><td>227%</td></tr>
+<tr><td>Airport terminal</td><td>Flow</td><td>1,000 m²</td><td>Self-hosted</td><td>Formal tender</td><td>Month 11</td><td>S$498K</td><td>93%</td></tr>
+<tr><td>Airport cargo</td><td>Operations</td><td>1,000 m²</td><td>Cloud</td><td>Direct award</td><td>Month 8</td><td>S$494K</td><td>92%</td></tr>
+<tr><td>Transit</td><td>Gates</td><td>Gate</td><td>Self-hosted</td><td>Study, tender, acquirer</td><td>Month 17</td><td>S$1.22M</td><td>88%</td></tr>
+<tr><td>Civic estates</td><td>Operations</td><td>1,000 m²</td><td>Self-hosted</td><td>Security review, tender</td><td>Month 16</td><td>S$868K</td><td>140%</td></tr>
+<tr><td>Manufacturing</td><td>Operations</td><td>1,000 m²</td><td>Cloud</td><td>Short; plant signs</td><td>Month 6</td><td>S$120K</td><td>39%</td></tr>
+<tr><td>Industrial safety</td><td>Operations (hardened)</td><td>1,000 m²</td><td>Cloud</td><td>HSE validation</td><td>Month 8.5</td><td>S$182K</td><td>62%</td></tr>
+</table>
+<p style="font-size:26px;line-height:1.4;color:#5f6368">3-yr ROI = STYL profit ÷ STYL cost over the pilot and 36 months, with sales and marketing cost (section 6).</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 16</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Healthcare gives the highest return. The hardware is cheap (one tag per bed, half an anchor per bed) and the software price per bed is high. Manufacturing gives the lowest: one small site pays the minimum fee and the fixed cloud cost. Transit gives the largest year 1, because set-up for 1,210 hardened anchors is large.</p></details></div><div class="slide" id="s17"><div class="num">17</div><div class="frame"><section id="market-hc" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Markets · Healthcare in numbers</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Room-level systems are common. Bed-level is not.</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1.25fr;gap:24px">
+<div style="display:flex;flex-direction:column;gap:16px"><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px"><div style="display:flex;flex-direction:column;gap:6px;background:#f1f3f4;padding:20px 24px;border-radius:16px"><p style="font-size:44px;font-weight:600;color:#0080ff;line-height:1.1">S$12.9M</p><p style="font-size:23px;line-height:1.35">Singapore serviceable market per year, FY28</p><p style="font-size:21px;color:#1a7f4b">Certain · MOH 2025</p></div><div style="display:flex;flex-direction:column;gap:6px;background:#f1f3f4;padding:20px 24px;border-radius:16px"><p style="font-size:44px;font-weight:600;color:#0080ff;line-height:1.1">~S$249M</p><p style="font-size:23px;line-height:1.35">Japan, 735 hospitals with 400+ beds, self-hosted only</p><p style="font-size:21px;color:#1a7f4b">Certain · MHLW 2023; price not tested</p></div><div style="display:flex;flex-direction:column;gap:6px;background:#f1f3f4;padding:20px 24px;border-radius:16px"><p style="font-size:44px;font-weight:600;color:#0080ff;line-height:1.1">15,946</p><p style="font-size:23px;line-height:1.35">Singapore acute and community beds, plus 600 new by 2027</p><p style="font-size:21px;color:#1a7f4b">Certain · MOH Health Facts 2025</p></div><div style="display:flex;flex-direction:column;gap:6px;background:#f1f3f4;padding:20px 24px;border-radius:16px"><p style="font-size:44px;font-weight:600;color:#0080ff;line-height:1.1">Nurses</p><p style="font-size:23px;line-height:1.35">Too few nurses in Singapore. Japan: doctor overtime limits since 2024</p><p style="font-size:21px;color:#9a6700">Likely · CIO brief</p></div></div></div>
+<div style="display:flex;flex-direction:column;gap:16px"><h3 style="font-size:28px;font-weight:600">Competitor groups, local incumbent first</h3><table style="font-size:22px;color:#202124;border:1px solid #dadce0;padding:6px 10px">
+<tr style="background:#f1f3f4"><th style="width:27%">Group</th><th style="width:17%">Accuracy</th><th style="width:56%">Our answer</th></tr>
+<tr><td>Cadi Scientific (local)</td><td>2–2.5 m</td><td>Add STYL where the hospital needs the bed</td></tr>
+<tr><td>Baxter (Hillrom)</td><td>&lt; 1 m</td><td>Any nurse call with an API</td></tr>
+<tr><td>Proxximos (UK)</td><td>±25 cm</td><td>Price per bed; Singapore cloud or self-hosted</td></tr>
+<tr><td>CenTrak, Midmark, Sonitor</td><td>Room</td><td>No equipment in each room</td></tr>
+<tr><td>Kontakt.io, Cisco, HPE</td><td>Room, zone</td><td>Cloud or self-hosted; we use their data</td></tr>
+<tr><td>Pozyx, Sewio, Ubisense</td><td>10–30 cm</td><td>We sell ward results, not location points</td></tr>
+</table></div>
+</div>
+<p style="font-size:24px;line-height:1.4;background:#e6f2ff;padding:18px 28px;border-radius:12px"><span style="font-weight:600">Other markets: </span>no market size or competitor research yet. Each product sheet must do stage 3 before release.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 17</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>All healthcare facts come from the CIO Product Team Brief, with primary sources: MOH Singapore Health Facts 2025, MOH Committee of Supply 2025, MHLW Survey of Medical Institutions 2023. The serviceable market uses S$810 per bed per year before discount. The local incumbent, Cadi Scientific, is in TTSH, SGH, SKH, KTPH and KKH: it is our real competitor, not the global leaders. Threats to monitor: Cadi adds UWB through Cisco Wi-Fi 7; Baxter sells UWB in Asia; Bluetooth Channel Sounding reaches 0.3–1 m from 2027.</p></details></div><div class="slide" id="s18"><div class="num">18</div><div class="frame"><section id="channel" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Markets · Partners</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">NXP and two integrators carry Simulate to market</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+<div style="display:flex;flex-direction:column;gap:16px"><h3 style="font-size:30px;font-weight:600">NXP silicon partner</h3><ul style="font-size:26px;line-height:1.45;color:#202124;display:flex;flex-direction:column;gap:8px"><li>NXP funds pilots that test its chips in the field.</li><li>Months 0–3: agree co-funded pilots (Gates, CAG) and one Simulate case.</li><li>Months 3–6: joint showcase. Send NXP kit customers to our workshop.</li><li>Partner showcase licence: S$32,000–58,000 a year.</li></ul></div>
+<div style="display:flex;flex-direction:column;gap:16px"><h3 style="font-size:30px;font-weight:600">Integrators: NCS and ST Engineering</h3><ul style="font-size:26px;line-height:1.45;color:#202124;display:flex;flex-direction:column;gap:8px"><li>They bid public-sector RTLS and transit tenders, including LTA.</li><li>They use Simulate to size each bid.</li><li>Each sized site becomes a count of anchors and tags for STYL.</li></ul><h3 style="font-size:30px;font-weight:600">Not priced here</h3><p style="font-size:26px;line-height:1.4;color:#5f6368">Retail and environment open with products that use no UWB. Stadiums stay on hold.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 18</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>A partner is a route to market, not a segment. NXP co-funding has the most value on the Gate pilot, our most expensive pilot at S$120,000. The licence range is the earlier US$25,000–45,000 at S$1.28.</p></details></div><div class="slide" id="s19"><div class="num">19</div><div class="frame"><section id="div-3" data-transition="fade" style="background:#202124;color:#f8f9fa;font-family:'Onest', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<p style="font-size:120px;font-weight:600;color:#6099ff;line-height:1.1">03</p>
+<h2 style="font-size:80px;font-weight:600;line-height:1.1;color:#f8f9fa">Engagement framework and timeline</h2>
+<p style="font-size:36px;line-height:1.4;color:#dadce0;width:1400px">Eight gated stages, how long each market takes, and the teams that do the work</p>
+</section>
+</div></div><div class="slide" id="s20"><div class="num">20</div><div class="frame"><section id="framework" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Engagement framework</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Every deal goes through the same eight gated stages</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:24px 26px;border-radius:16px"><p style="font-size:22px;font-weight:600;color:#005bb6">Stage 0 · 2–4 wks</p><h3 style="font-size:30px;font-weight:600">Target and prospect</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">Gate: first meeting booked</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:24px 26px;border-radius:16px"><p style="font-size:22px;font-weight:600;color:#005bb6">Stage 1 · 1–2 wks</p><h3 style="font-size:30px;font-weight:600">Discovery</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">Gate: the four first-meeting questions answered</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:24px 26px;border-radius:16px"><p style="font-size:22px;font-weight:600;color:#005bb6">Stage 2 · 2–4 wks</p><h3 style="font-size:30px;font-weight:600">Workshop + Simulate</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">Gate: pilot scope and success measures agreed</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:24px 26px;border-radius:16px"><p style="font-size:22px;font-weight:600;color:#005bb6">Stage 3 · 2–6 wks</p><h3 style="font-size:30px;font-weight:600">Pilot contract</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">Gate: fixed-fee pilot signed, full price in it</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:24px 26px;border-radius:16px"><p style="font-size:22px;font-weight:600;color:#005bb6">Stage 4 · ~3 wks</p><h3 style="font-size:30px;font-weight:600">Pilot set-up</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">Gate: pilot live, hardware from the pool</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:24px 26px;border-radius:16px"><p style="font-size:22px;font-weight:600;color:#005bb6">Stage 5 · 90 days</p><h3 style="font-size:30px;font-weight:600">Pilot run</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">Gate: success measures signed off</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:24px 26px;border-radius:16px"><p style="font-size:22px;font-weight:600;color:#005bb6">Stage 6 · 1–7 months</p><h3 style="font-size:30px;font-weight:600">Procurement</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">Gate: PO signed = final sale</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:24px 26px;border-radius:16px"><p style="font-size:22px;font-weight:600;color:#005bb6">Stages 7–8 · 5–12 months</p><h3 style="font-size:30px;font-weight:600">Rollout and expand</h3><p style="font-size:24px;line-height:1.35;color:#5f6368">3-month hardware lead, then site by site</p></div>
+</div>
+<p style="font-size:26px;line-height:1.4;color:#5f6368">Each gate can lose the customer. The next slide gives a recovery action for each gate. We run 5 pilots at one time, maximum.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 20</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Sales does not move a deal to the next stage until the gate is closed. The final sale is the purchase order at stage 6. Rollout then waits 3 months for production hardware, because we order only against a confirmed order. Ask the four first-meeting questions from the Ward sheet in stage 1: number of beds or units, who makes the report today, which nurse call or fare system, and cloud or self-hosted. Stage times are assumption A45.</p></details></div><div class="slide" id="s21"><div class="num">21</div><div class="frame"><section id="gates" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Drop-off and recovery</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Each gate loses customers; each gate has a recovery action</h2>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:8px 12px">
+<tr style="background:#f1f3f4"><th style="width:16%">Gate</th><th style="width:11%">Pass rate</th><th style="width:33%">Why customers stop</th><th style="width:40%">Recovery action</th></tr>
+<tr><td>1 Qualified</td><td>40%</td><td>No budget owner. No urgency.</td><td>Nurture each quarter. Qualify again in 6 months.</td></tr>
+<tr><td>2 Workshop</td><td>60%</td><td>No time. No clear problem yet.</td><td>Show Simulate remotely, on their own floor plan.</td></tr>
+<tr><td>3 Pilot signed</td><td>50%</td><td>Pilot fee. Procurement rules.</td><td>Smaller pilot area. NXP co-funds. Pay in two parts.</td></tr>
+<tr><td>5 Success</td><td>80%</td><td>A success measure is missed.</td><td>Joint fix plan. 4 more weeks at no fee.</td></tr>
+<tr><td>6 PO signed</td><td>70%</td><td>Budget cycle. Tender lost.</td><td>Letter of intent. Monthly hardware service fits opex.</td></tr>
+</table>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:24px 28px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">~7% of first meetings become a PO</h3><p style="font-size:24px;line-height:1.4;color:#5f6368">So we need about 15 first meetings for each deal that we win (A45).</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:24px 28px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">Rule: two recovery attempts in 6 months</h3><p style="font-size:24px;line-height:1.4;color:#5f6368">Then the account goes to quarterly nurture. Never delete a lost account.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 21</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Pass rates are my assumptions for enterprise IoT sales with a free workshop and a paid pilot. Replace them with CRM data after the first 20 first meetings. Stage 4 is not a decision gate, so it is not in the table. Budgets and owners change, so a lost account stays in nurture with case studies and event invitations.</p></details></div><div class="slide" id="s22"><div class="num">22</div><div class="frame"><section id="timeline" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Timeline by market</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">First purchase order comes at month 6 to 17</h2>
+</div>
+<div style="display:flex;flex-direction:row;gap:28px;flex-wrap:wrap"><div style="display:flex;flex-direction:row;gap:10px;align-items:center"><div style="width:28px;height:28px;background:#bdc1c6"></div><p style="font-size:24px">Discovery, workshop, study</p></div><div style="display:flex;flex-direction:row;gap:10px;align-items:center"><div style="width:28px;height:28px;background:#0080ff"></div><p style="font-size:24px">Pilot</p></div><div style="display:flex;flex-direction:row;gap:10px;align-items:center"><div style="width:28px;height:28px;background:#ffab00"></div><p style="font-size:24px">Procurement → PO</p></div><div style="display:flex;flex-direction:row;gap:10px;align-items:center"><div style="width:28px;height:28px;background:#5f6368"></div><p style="font-size:24px">Hardware lead</p></div><div style="display:flex;flex-direction:row;gap:10px;align-items:center"><div style="width:28px;height:28px;background:#36b37e"></div><p style="font-size:24px">Rollout</p></div></div>
+<div style="display:flex;flex-direction:column;gap:14px"><div style="display:flex;flex-direction:row;align-items:center"><p style="font-size:24px;color:#5f6368;width:360px">Month</p><p style="font-size:24px;color:#5f6368;width:192px">0</p><p style="font-size:24px;color:#5f6368;width:192px">6</p><p style="font-size:24px;color:#5f6368;width:192px">12</p><p style="font-size:24px;color:#5f6368;width:192px">18</p><p style="font-size:24px;color:#5f6368;width:192px">24</p><p style="font-size:24px;color:#5f6368;width:192px">30</p></div>
+<div style="display:flex;flex-direction:row;align-items:center"><p style="font-size:26px;font-weight:600;width:360px">Manufacturing · Ops</p><div style="width:32px;height:44px;background:#bdc1c6"></div><div style="width:96px;height:44px;background:#0080ff"></div><div style="width:64px;height:44px;background:#ffab00"></div><div style="width:96px;height:44px;background:#5f6368"></div><div style="width:64px;height:44px;background:#36b37e"></div><p style="font-size:24px;color:#5f6368;padding:0px 16px">PO 6 · live 11</p></div>
+<div style="display:flex;flex-direction:row;align-items:center"><p style="font-size:26px;font-weight:600;width:360px">Airport cargo · Ops</p><div style="width:48px;height:44px;background:#bdc1c6"></div><div style="width:96px;height:44px;background:#0080ff"></div><div style="width:112px;height:44px;background:#ffab00"></div><div style="width:96px;height:44px;background:#5f6368"></div><div style="width:128px;height:44px;background:#36b37e"></div><p style="font-size:24px;color:#5f6368;padding:0px 16px">PO 8 · live 15</p></div>
+<div style="display:flex;flex-direction:row;align-items:center"><p style="font-size:26px;font-weight:600;width:360px">Industrial safety · Ops</p><div style="width:48px;height:44px;background:#bdc1c6"></div><div style="width:96px;height:44px;background:#0080ff"></div><div style="width:128px;height:44px;background:#ffab00"></div><div style="width:96px;height:44px;background:#5f6368"></div><div style="width:112px;height:44px;background:#36b37e"></div><p style="font-size:24px;color:#5f6368;padding:0px 16px">PO 8.5 · live 15</p></div>
+<div style="display:flex;flex-direction:row;align-items:center"><p style="font-size:26px;font-weight:600;width:360px">Healthcare · Ward</p><div style="width:96px;height:44px;background:#bdc1c6"></div><div style="width:96px;height:44px;background:#0080ff"></div><div style="width:96px;height:44px;background:#ffab00"></div><div style="width:96px;height:44px;background:#5f6368"></div><div style="width:96px;height:44px;background:#36b37e"></div><p style="font-size:24px;color:#5f6368;padding:0px 16px">PO 9 · live 15</p></div>
+<div style="display:flex;flex-direction:row;align-items:center"><p style="font-size:26px;font-weight:600;width:360px">Airport · Flow</p><div style="width:64px;height:44px;background:#bdc1c6"></div><div style="width:96px;height:44px;background:#0080ff"></div><div style="width:192px;height:44px;background:#ffab00"></div><div style="width:96px;height:44px;background:#5f6368"></div><div style="width:192px;height:44px;background:#36b37e"></div><p style="font-size:24px;color:#5f6368;padding:0px 16px">PO 11 · live 20</p></div>
+<div style="display:flex;flex-direction:row;align-items:center"><p style="font-size:26px;font-weight:600;width:360px">Civic · Ops</p><div style="width:192px;height:44px;background:#bdc1c6"></div><div style="width:96px;height:44px;background:#0080ff"></div><div style="width:224px;height:44px;background:#ffab00"></div><div style="width:96px;height:44px;background:#5f6368"></div><div style="width:192px;height:44px;background:#36b37e"></div><p style="font-size:24px;color:#5f6368;padding:0px 16px">PO 16 · live 25</p></div>
+<div style="display:flex;flex-direction:row;align-items:center"><p style="font-size:26px;font-weight:600;width:360px">Transit · Gates</p><div style="width:192px;height:44px;background:#bdc1c6"></div><div style="width:128px;height:44px;background:#0080ff"></div><div style="width:224px;height:44px;background:#ffab00"></div><div style="width:96px;height:44px;background:#5f6368"></div><div style="width:288px;height:44px;background:#36b37e"></div><p style="font-size:24px;color:#5f6368;padding:0px 16px">PO 17 · live 29</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 22 · Months from first meeting</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Short markets (manufacturing, airport cargo, industrial safety) fund the pipeline while civic and transit mature. Every pilot now runs 90 days at a fixed fee; the Gate pilot runs 120 days after a paid study. Healthcare starts with an IT and data review, then a 90-day Ward pilot. Only one hardened pilot can run at one time: the pool holds 10 hardened anchors. Stage times are assumption A45.</p></details></div><div class="slide" id="s23"><div class="num">23</div><div class="frame"><section id="demand-gen" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Before Gate 1</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Six wins a year needs about 90 first meetings</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1.4fr;gap:24px">
+<div style="display:flex;flex-direction:column;gap:16px"><h3 style="font-size:30px;font-weight:600">Year-1 funnel (A45)</h3><ul style="font-size:26px;line-height:1.45;color:#202124;display:flex;flex-direction:column;gap:8px"><li>90 first meetings (about 8 each month)</li><li>→ 36 qualified</li><li>→ 22 workshops</li><li>→ 11 pilots (5 at one time, maximum)</li><li>→ 9 successful pilots</li><li>→ 6 purchase orders</li></ul></div>
+<div style="display:flex;flex-direction:column;gap:16px"><h3 style="font-size:30px;font-weight:600">How we make Sales, BD and Marketing stronger</h3><ul style="font-size:24px;line-height:1.45;color:#202124;display:flex;flex-direction:column;gap:8px"><li>Partners: DBS, Sodexo, NXP, NCS, ST Engineering, Toppan and Quadrac give about 40% of meetings.</li><li>Events: 2 NXP showcases and 2 industry events each year.</li><li>Content: one case study for each NOW market after consent; Simulate demo videos.</li><li>Outbound: 30 named accounts for each AE; 4 first meetings for each AE each month.</li><li>Marketing: 1 dedicated marketer and about S$154,000 a year (A46).</li></ul></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 23</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Six wins in year 1 is my assumption to size the funnel. It is not a forecast. At the assumed pass rates, two AEs and a Japan BD lead each need 3 to 4 first meetings each month. Partners and events must give the rest. Without this work, few deals reach Gate 1.</p></details></div><div class="slide" id="s24"><div class="num">24</div><div class="frame"><section id="teams" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Teams and staffing</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">About 23 FTE now, about 42 at scale; hire when demand requires</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1.2fr;gap:24px">
+<div style="display:flex;flex-direction:column;gap:16px"><table style="font-size:23px;color:#202124;border:1px solid #dadce0;padding:4px 12px">
+<tr style="background:#f1f3f4"><th style="width:50%">Function</th><th style="width:25%">Phase 1</th><th style="width:25%">Phase 2</th></tr>
+<tr><td>Leadership</td><td>1</td><td>1</td></tr>
+<tr><td>Sales (SG + Japan)</td><td>3</td><td>5</td></tr>
+<tr><td>Business development</td><td>1</td><td>1.5</td></tr>
+<tr><td>Presales (Simulate)</td><td>2</td><td>3</td></tr>
+<tr><td>Product</td><td>1.5</td><td>2</td></tr>
+<tr><td>Technology</td><td>4</td><td>7</td></tr>
+<tr><td>Hardware and supply</td><td>1.5</td><td>3</td></tr>
+<tr><td>Service team</td><td>3.5</td><td>7</td></tr>
+<tr><td>L1 / L2 support</td><td>4</td><td>9</td></tr>
+<tr><td>Customer success</td><td>1</td><td>2</td></tr>
+<tr><td>Commercial, marketing</td><td>1</td><td>2</td></tr>
+</table></div>
+<div style="display:flex;flex-direction:column;gap:16px"><h3 style="font-size:30px;font-weight:600">Hiring triggers (proposal, A49)</h3><ul style="font-size:24px;line-height:1.45;color:#202124;display:flex;flex-direction:column;gap:8px"><li>Sales: an AE has more than 10 active deals, or 5 or more Japan operators are qualified.</li><li>Presales: more than 4 workshops each month, for 2 months.</li><li>Service: more than 3 pilots, or a pilot and a rollout, at one time.</li><li>L1 / L2: 24/7 rota at the first Gates or Flow contract; 1 more L2 for each 10 sites.</li></ul></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 24</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Phase 1 is about 23 FTE. Many are current staff, part-time. Phase 2 follows 10 or more production sites. We staff the 24/7 rota ourselves: 6 L1 analysts and 3 L2 engineers on call. Government sites need at least 2 field staff with security clearance.</p></details></div><div class="slide" id="s25"><div class="num">25</div><div class="frame"><section id="teams-reco" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Staffing recommendation</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Shared staff will limit us; make a core team of 7</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1.3fr;gap:24px">
+<div style="display:flex;flex-direction:column;gap:16px"><h3 style="font-size:30px;font-weight:600">Risks if all staff stay shared</h3><ul style="font-size:26px;line-height:1.45;color:#202124;display:flex;flex-direction:column;gap:8px"><li>The pilot limit falls from 5 to 2 or 3.</li><li>Workshops wait for free presales time.</li><li>L1 and L2 work conflicts with current product SLAs.</li><li>Half a marketer cannot find 90 meetings.</li></ul></div>
+<div style="display:flex;flex-direction:column;gap:16px"><table style="font-size:23px;color:#202124;border:1px solid #dadce0;padding:6px 12px">
+<tr style="background:#f1f3f4"><th style="width:40%">Role</th><th style="width:25%">Today</th><th style="width:35%">Recommend</th></tr>
+<tr><td>GTM lead</td><td>Shared</td><td>1 dedicated</td></tr>
+<tr><td>Account executives, SG</td><td>Shared</td><td>2 dedicated</td></tr>
+<tr><td>Japan AE / BD</td><td>None</td><td>1 new hire</td></tr>
+<tr><td>Solutions engineers</td><td>Shared</td><td>1 dedicated + 1 shared</td></tr>
+<tr><td>Field technicians</td><td>Shared</td><td>1 dedicated + installers</td></tr>
+<tr><td>Marketing</td><td>0.5 shared</td><td>1 dedicated</td></tr>
+<tr><td>Product, tech, L1/L2, finance</td><td>Shared</td><td>Shared, hours fixed in writing</td></tr>
+</table></div>
+</div>
+<p style="font-size:26px;line-height:1.4;background:#e6f2ff;padding:18px 28px;border-radius:12px">The core team has about 7 people. All other staff stay shared, with hours fixed in writing (A49).</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 25</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Most resources are shared today. The core team is the minimum that keeps the funnel and the 5-pilot limit real. If the budget is small, the first change is to use certified subcontract installers instead of a dedicated field technician.</p></details></div><div class="slide" id="s26"><div class="num">26</div><div class="frame"><section id="div-4" data-transition="fade" style="background:#202124;color:#f8f9fa;font-family:'Onest', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<p style="font-size:120px;font-weight:600;color:#6099ff;line-height:1.1">04</p>
+<h2 style="font-size:80px;font-weight:600;line-height:1.1;color:#f8f9fa">Prices</h2>
+<p style="font-size:36px;line-height:1.4;color:#dadce0;width:1400px">One formula for every UWB product: software + hardware service + set-up</p>
+</section>
+</div></div><div class="slide" id="s27"><div class="num">27</div><div class="frame"><section id="price-formula" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Prices · Common rules</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">One formula, the same rules for every product</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 60px 1fr 60px 1fr;align-items:stretch"><div style="display:flex;flex-direction:column;gap:8px;background:#e6f2ff;padding:24px 28px;border-radius:16px"><h3 style="font-size:30px;font-weight:600">Software</h3><p style="font-size:24px;line-height:1.4">Per unit, per year. Paid each year in advance.</p></div><p style="font-size:64px;font-weight:600;color:#0080ff;text-align:center;align-self:center">+</p><div style="display:flex;flex-direction:column;gap:8px;background:#e6f2ff;padding:24px 28px;border-radius:16px"><h3 style="font-size:30px;font-weight:600">Hardware service</h3><p style="font-size:24px;line-height:1.4">Per unit, per month. STYL owns the hardware.</p></div><p style="font-size:64px;font-weight:600;color:#0080ff;text-align:center;align-self:center">+</p><div style="display:flex;flex-direction:column;gap:8px;background:#e6f2ff;padding:24px 28px;border-radius:16px"><h3 style="font-size:30px;font-weight:600">Set-up</h3><p style="font-size:24px;line-height:1.4">One time, after the site survey. Paid on delivery.</p></div></div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:6px 12px">
+<tr style="background:#f1f3f4"><th style="width:30%">Rule</th><th style="width:70%">Value</th></tr>
+<tr><td>Price unit</td><td>The unit that the buyer budgets in: bed, gate, or 1,000 m² of floor</td></tr>
+<tr><td>Self-hosted platform fee</td><td>S$95,000 per deployment per year. Customer provides servers to our specification</td></tr>
+<tr><td>Minimum software fee</td><td>S$60,000 per site per year (Gates: S$250,000 per operator)</td></tr>
+<tr><td>Extra tags</td><td>S$800 for 10 standard tags; S$1,600 for 10 hardened tags. One-time sale</td></tr>
+<tr><td>Contract</td><td>3 years</td></tr>
+<tr><td>Discounts</td><td>Sales Director up to 20%. CEO above 20%. No discount on the minimum fee or the platform fee</td></tr>
+<tr><td>Margin</td><td>No quote below 30% gross margin. Target 40% for each customer over 24 months</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 27</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>These rules come from the CIO Ward sheet and the CIO Process Guide (STYL Pricing Strategy v3, 5 Sep 2026). There is one list price and no volume table: the Sales Director can already give up to 20%. The Gates minimum fee and the hardened tag price are my proposals (A6, A23). All prices are in SGD before GST.</p></details></div><div class="slide" id="s28"><div class="num">28</div><div class="frame"><section id="price-ward" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Prices · Precision RTLS · Ward</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">One price per bed. Three parts. Two ways to host.</h2>
+<p style="font-size:24px;font-weight:600;color:#9a6700">Source: CIO Ward Sales Sheet v1.0 (draft for review) · status: Certain, not yet signed off</p>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+<div style="display:flex;flex-direction:column;gap:16px"><table style="font-size:23px;color:#202124;border:1px solid #dadce0;padding:6px 12px">
+<tr style="background:#f1f3f4"><th style="width:40%">Part 1 · Software</th><th style="width:30%">Cloud</th><th style="width:30%">Self-hosted</th></tr>
+<tr><td>Per bed per year</td><td>S$450</td><td>S$450</td></tr>
+<tr><td>Platform fee per site per year</td><td>Included</td><td>S$95,000</td></tr>
+<tr><td>Servers and GPU</td><td>STYL</td><td>Hospital</td></tr>
+<tr><td>AI questions per bed per month</td><td>30</td><td>No limit</td></tr>
+<tr><td>Where we sell it</td><td>Singapore</td><td>Singapore, Japan</td></tr>
+</table><p style="font-size:22px;line-height:1.4;color:#5f6368">Both include: map of staff and equipment to the bed, equipment search, alerts, ward reports, contact tracing, nurse call link, unlimited users.</p></div>
+<div style="display:flex;flex-direction:column;gap:16px"><table style="font-size:23px;color:#202124;border:1px solid #dadce0;padding:6px 12px">
+<tr style="background:#f1f3f4"><th style="width:62%">Part 2 · Hardware service</th><th style="width:38%">Price</th></tr>
+<tr><td>Per bed per month, bays of 3+ beds</td><td>S$30</td></tr>
+<tr><td>Per bed per month, rooms of 1–2 beds</td><td>S$60</td></tr>
+<tr><td>Allowance</td><td>1 staff tag per bed</td></tr>
+</table><table style="font-size:23px;color:#202124;border:1px solid #dadce0;padding:6px 12px">
+<tr style="background:#f1f3f4"><th style="width:50%">Example: 500 beds in bays</th><th style="width:25%">Cloud</th><th style="width:25%">Self-hosted</th></tr>
+<tr><td>Software 500 × S$450</td><td>225,000</td><td>225,000</td></tr>
+<tr><td>Platform fee</td><td>—</td><td>95,000</td></tr>
+<tr><td>Hardware 500 × S$30 × 12</td><td>180,000</td><td>180,000</td></tr>
+<tr style="background:#e6f2ff"><td><span style="font-weight:600">S$ per year</span></td><td><span style="font-weight:600">405,000</span></td><td><span style="font-weight:600">500,000</span></td></tr>
+<tr><td>Per bed per month</td><td>S$67.50</td><td>S$83</td></tr>
+</table></div>
+</div>
+<p style="font-size:24px;line-height:1.4;color:#5f6368">Set-up is extra: site survey, installation for each anchor, nurse call link. Pilot: 1 ward, up to 40 beds, 90 days, S$40,000, credited to year 1.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 28</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>This is the CIO sheet, without changes. The two hardware rates exist because each room needs at least 3 anchors: a bay uses 0.5 anchors per bed, a 1–2 bed room uses 1.5 to 3. Sales asks for the room types in the first meeting, and the survey confirms them before the quote. Do not say: "track your nurses", "medical grade", "clinical alerts", "unlimited tags" or "staff help button".</p></details></div><div class="slide" id="s29"><div class="num">29</div><div class="frame"><section id="price-matrix" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Prices · All four UWB products</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">The same three parts for each product</h2>
+<p style="font-size:24px;font-weight:600;color:#9a6700">Ward: CIO sheet. Operations, Flow, Gates: my proposals (A25–A27), Guessing, for decision</p>
+</div>
+<table style="font-size:23px;color:#202124;border:1px solid #dadce0;padding:6px 12px">
+<tr style="background:#f1f3f4"><th style="width:22%"></th><th style="width:19.5%">Ward</th><th style="width:19.5%">Operations RTLS</th><th style="width:19.5%">Flow &amp; Wayfinding</th><th style="width:19.5%">Hands-free Gates</th></tr>
+<tr><td><span style="font-weight:600">Price unit</span></td><td>Bed</td><td>1,000 m² of floor</td><td>1,000 m² public area</td><td>Gate (lane or bus door)</td></tr>
+<tr style="background:#e6f2ff"><td><span style="font-weight:600">Software / unit / year</span></td><td>S$450</td><td>S$9,000</td><td>S$12,000</td><td>S$400</td></tr>
+<tr><td><span style="font-weight:600">Hardware / unit / month</span></td><td>S$30 bay · S$60 room</td><td>S$250 · S$500 hardened</td><td>S$250</td><td>S$30</td></tr>
+<tr><td><span style="font-weight:600">Allowance per unit</span></td><td>1 tag, 0.5–3 anchors</td><td>8 anchors, 40 tags</td><td>8 anchors, 40 staff tags</td><td>2 hardened anchors</td></tr>
+<tr><td><span style="font-weight:600">Host</span></td><td>Cloud or self-hosted</td><td>Cloud or self-hosted</td><td>Self-hosted</td><td>Self-hosted</td></tr>
+<tr><td><span style="font-weight:600">Minimum fee / year</span></td><td>S$60,000 per site</td><td>S$60,000 per site</td><td>S$60,000 per site</td><td>S$250,000 per operator</td></tr>
+<tr><td><span style="font-weight:600">Fixed-fee pilot</span></td><td>S$40,000 · 90 days</td><td>S$25,000 · 90 days</td><td>S$60,000 · 90 days</td><td>S$120,000 · 120 days</td></tr>
+<tr><td><span style="font-weight:600">Example price / unit / month</span></td><td>S$83</td><td>S$1,100</td><td>S$1,567</td><td>S$74</td></tr>
+<tr><td><span style="font-weight:600">Status</span></td><td><span style="color:#1a7f4b">Sheet v1.0</span></td><td><span style="color:#6b4c9a">Proposal</span></td><td><span style="color:#6b4c9a">Proposal</span></td><td><span style="color:#6b4c9a">Proposal</span></td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 29</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>I derived the three proposals from the earlier subscription levels, converted to SGD and spread over the buyer unit. Operations: the cargo example at about S$1,100 per 1,000 m² per month. Flow: CAG at S$1,567. Gates: LTA at S$74 per gate. Each one must go through stages 2 to 6 before release. Riders and passengers carry UWB phones, so Flow and Gates include only staff tags.</p></details></div><div class="slide" id="s30"><div class="num">30</div><div class="frame"><section id="price-setup" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Prices · Set-up and services</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Set-up follows the site survey; each anchor has a price</h2>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:8px 12px">
+<tr style="background:#f1f3f4"><th style="width:40%">Item</th><th style="width:25%">Price</th><th style="width:15%">Our cost</th><th style="width:20%">Basis</th></tr>
+<tr><td>Site survey, per site</td><td>S$6,000</td><td>S$3,000</td><td>A29</td></tr>
+<tr><td>Installation, standard anchor</td><td>S$200</td><td>S$100</td><td>A29, A32</td></tr>
+<tr><td>Installation, hardened anchor</td><td>S$400</td><td>S$200</td><td>A29, A32</td></tr>
+<tr><td>Integration (nurse call, fare system, EMR)</td><td>S$1,400 per engineer-day</td><td>S$700</td><td>A29, A33</td></tr>
+<tr><td>Simulate gate study (transit)</td><td>S$28,000 fixed</td><td>S$14,000</td><td>A28</td></tr>
+<tr><td>Options: 3D building model, patient record link</td><td>Quote in engineer-days</td><td>—</td><td>CIO sheet</td></tr>
+</table>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:24px 28px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">Evidence · Singapore</h3><p style="font-size:23px;line-height:1.4;color:#5f6368">Electricians charge about S$60–120 an hour in 2026. Our S$200 an anchor at 6 anchors a day is S$1,200 a day, for install with RF calibration.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:24px 28px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">Evidence · Japan</h3><p style="font-size:23px;line-height:1.4;color:#5f6368">Tokyo public-works electrician rate: ¥34,300 a day from March 2026, before overheads. Verify with installers.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 30</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>The CIO sheet says: installation priced for each anchor, after the survey. The rates are the earlier day rates (S$600 cost, sold at 2×) divided by 6 standard or 3 hardened anchors a day. This replaces the 10-day installation package from v0.8. Sources: themoneybees.co Singapore electrician price guide 2026; Tokyo Metropolitan Government public-works labour rates, March 2026.</p></details></div><div class="slide" id="s31"><div class="num">31</div><div class="frame"><section id="pilot" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Prices · Pilots</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Every pilot has a fixed fee, a fixed end date and a credit</h2>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:8px 12px">
+<tr style="background:#f1f3f4"><th style="width:24%">Pilot</th><th style="width:26%">Size</th><th style="width:12%">Time</th><th style="width:14%">Fee</th><th style="width:12%">Our cost</th><th style="width:12%">Margin</th></tr>
+<tr><td>Ward (CIO)</td><td>1 ward, up to 40 beds</td><td>90 days</td><td>S$40,000</td><td>S$21,700</td><td>46%</td></tr>
+<tr><td>Operations</td><td>1 zone, up to 2,000 m²</td><td>90 days</td><td>S$25,000</td><td>~S$12–15,000</td><td>~40–50%</td></tr>
+<tr><td>Operations, hardened</td><td>1 zone, hardened kit</td><td>90 days</td><td>S$35,000</td><td>~S$16,000</td><td>~54%</td></tr>
+<tr><td>Flow</td><td>1 zone, up to 5,000 m²</td><td>90 days</td><td>S$60,000</td><td>~S$24,000</td><td>~60%</td></tr>
+<tr><td>Gates</td><td>Up to 6 gates, fare link</td><td>120 days</td><td>S$120,000</td><td>~S$55,000</td><td>~54%</td></tr>
+</table>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:24px 28px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">Credit</h3><p style="font-size:23px;line-height:1.4;color:#5f6368">The fee goes to year 1 if the customer buys within 6 months. Never paid as cash.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:24px 28px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">Before the pilot</h3><p style="font-size:23px;line-height:1.4;color:#5f6368">Agree the success measures, the full price and a reference clause.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:24px 28px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">Self-hosted pilots</h3><p style="font-size:23px;line-height:1.4;color:#5f6368">Atlantic-in-a-box on site, with the Solace Community Edition (pilots only).</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 31</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>The Ward pilot is from the CIO sheet: box S$6,100, support S$3,600, survey and set-up S$12,000. The other pilots are my proposals on the same basis. Hardware comes from the STYL pool and stays in place if the customer buys. This replaces the earlier licence-plus-services pilots and the loan server.</p></details></div><div class="slide" id="s32"><div class="num">32</div><div class="frame"><section id="div-5" data-transition="fade" style="background:#202124;color:#f8f9fa;font-family:'Onest', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<p style="font-size:120px;font-weight:600;color:#6099ff;line-height:1.1">05</p>
+<h2 style="font-size:80px;font-weight:600;line-height:1.1;color:#f8f9fa">Costs</h2>
+<p style="font-size:36px;line-height:1.4;color:#dadce0;width:1400px">What each price costs STYL. Internal only: never share with customers.</p>
+</section>
+</div></div><div class="slide" id="s33"><div class="num">33</div><div class="frame"><section id="costs-hw" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Internal cost list · Hardware and delivery</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">What each unit and day costs STYL</h2>
+<p style="font-size:24px;font-weight:600;color:#9a6700">Internal only · never share</p>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:8px 12px">
+<tr style="background:#f1f3f4"><th style="width:38%">Cost item</th><th style="width:27%">Our cost</th><th style="width:35%">Basis</th></tr>
+<tr><td>Standard anchor / hardened anchor</td><td>S$100 / S$200</td><td>CIO (A31); hardened 2×, mine (A17)</td></tr>
+<tr><td>Standard tag / hardened tag</td><td>S$40 / S$80</td><td>CIO (A31); hardened 2×, mine</td></tr>
+<tr><td>Installation, per anchor</td><td>S$100 / S$200</td><td>S$600 a day ÷ 6 or 3 anchors (A32)</td></tr>
+<tr><td>Site survey</td><td>S$3,000</td><td>My assumption (A29)</td></tr>
+<tr><td>Engineer-day</td><td>S$700</td><td>JC input (A33)</td></tr>
+<tr><td>Atlantic-in-a-box, per pilot</td><td>S$6,100</td><td>CIO (A39)</td></tr>
+<tr><td>Spares, repairs, field service</td><td>10% of hardware each year</td><td>CIO (A36)</td></tr>
+<tr><td>Pilot pool: 60 anchors, 200 tags</td><td>~S$15,000</td><td>JC quantity, CIO cost (A40)</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 33</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Every selling price comes from this list and a margin. Change a cost here first, then the price list. Hardware is a service, so STYL pays for it on delivery and recovers it through the monthly fee. A Ward bed in a bay uses half an anchor and one tag: S$90 of hardware, about S$1.50 a month over 60 months.</p></details></div><div class="slide" id="s34"><div class="num">34</div><div class="frame"><section id="costs-ops" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Internal cost list · Run costs and checks</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Run costs per site, with market checks</h2>
+<p style="font-size:24px;font-weight:600;color:#9a6700">Internal only</p>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:8px 12px">
+<tr style="background:#f1f3f4"><th style="width:30%">Cost item</th><th style="width:30%">Our cost</th><th style="width:40%">Check</th></tr>
+<tr><td>Cloud site</td><td>S$3,200 a month</td><td>Backend S$2,000 + support S$1,200 (CIO, A34)</td></tr>
+<tr><td>Self-hosted deployment</td><td>S$86,600 a year</td><td>Solace S$65,000 + support S$21,600 (CIO, A35)</td></tr>
+<tr><td>24/7 support, Flow or Gates</td><td>S$93,000 a year per account</td><td>Share of 6 L1 + 3 L2 rota (A38)</td></tr>
+<tr><td>AI questions, cloud Ward</td><td>S$0.10 each, 30 per bed a month</td><td>Measure in the pilot (A37)</td></tr>
+<tr><td>L1 / L2 salaries</td><td>S$64,000 / S$109,000 loaded</td><td>Market S$70–130K (Morgan McKinley 2026)</td></tr>
+<tr><td>Commission</td><td>10% of year-1 recurring revenue</td><td>SaaS norm about 10% of contract value</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 34</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>The cloud and self-hosted costs are the CIO figures. The 24/7 share is the earlier US$73,000 at S$1.28. Our L1 budget buys junior staff only. Experienced 24/7 analysts would increase the rota cost by about one third. Sources: Morgan McKinley Singapore Salary Guide 2026; SaaStr on SaaS commission.</p></details></div><div class="slide" id="s35"><div class="num">35</div><div class="frame"><section id="comp" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Optional · For management decision (A48)</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Pay commission on profit, not on revenue</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+<div style="display:flex;flex-direction:column;gap:16px"><table style="font-size:23px;color:#202124;border:1px solid #dadce0;padding:6px 12px">
+<tr style="background:#f1f3f4"><th style="width:36%">Element</th><th style="width:34%">Proposal</th><th style="width:30%">SaaS norm</th></tr>
+<tr><td>Software and platform fee</td><td>10% of year-1 gross profit</td><td>~10% of contract value</td></tr>
+<tr><td>Hardware service</td><td>6% of year-1 gross profit</td><td>Not covered</td></tr>
+<tr><td>Set-up and tags</td><td>3% of gross profit</td><td>Not covered</td></tr>
+<tr><td>Above quota</td><td>1.5× rate</td><td>15–20% above quota</td></tr>
+<tr><td>Margin below 30%</td><td>No commission</td><td>—</td></tr>
+</table></div>
+<div style="display:flex;flex-direction:column;gap:16px"><h3 style="font-size:30px;font-weight:600">Why consider it</h3><ul style="font-size:24px;line-height:1.45;color:#202124;display:flex;flex-direction:column;gap:8px"><li>Discounts pay less commission automatically.</li><li>It rewards margin, not volume.</li><li>No bonus for a free pilot; S$1,300 for a paid pilot.</li></ul></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 35</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>This is optional. Management can keep the current plan. The model uses 10% of year-1 recurring revenue, the SaaS norm, so the examples do not depend on this decision. Example: TTSH year-1 recurring revenue is S$500,000, so commission is about S$50,000 in the model.</p></details></div><div class="slide" id="s36"><div class="num">36</div><div class="frame"><section id="div-6" data-transition="fade" style="background:#202124;color:#f8f9fa;font-family:'Onest', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<p style="font-size:120px;font-weight:600;color:#6099ff;line-height:1.1">06</p>
+<h2 style="font-size:80px;font-weight:600;line-height:1.1;color:#f8f9fa">Examples by market</h2>
+<p style="font-size:36px;line-height:1.4;color:#dadce0;width:1400px">Each market from first meeting to final sale, with the return to STYL</p>
+</section>
+</div></div><div class="slide" id="s37"><div class="num">37</div><div class="frame"><section id="segments" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Examples at a glance · Breakeven and return</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Each example breaks even about 4 months after its PO</h2>
+<p style="font-size:24px;font-weight:600;color:#9a6700">All values are assumptions for internal review · see register</p>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:8px 12px">
+<tr style="background:#f1f3f4"><th style="width:22%">Example</th><th style="width:12%">First PO</th><th style="width:12%">Breakeven</th><th style="width:13%">Max cash out</th><th style="width:14%">3-yr revenue</th><th style="width:14%">3-yr profit</th><th style="width:13%">3-yr ROI</th></tr>
+<tr><td>Healthcare · Ward</td><td>Month 9</td><td>Month 13</td><td>S$86K</td><td>S$1.59M</td><td>S$1.10M</td><td>227%</td></tr>
+<tr><td>Airport · Flow</td><td>Month 11</td><td>Month 15</td><td>S$83K</td><td>S$1.51M</td><td>S$731K</td><td>93%</td></tr>
+<tr><td>Airport cargo · Ops</td><td>Month 8</td><td>Month 12</td><td>S$188K</td><td>S$1.15M</td><td>S$553K</td><td>92%</td></tr>
+<tr><td>Transit · Gates</td><td>Month 17</td><td>Month 21</td><td>S$255K</td><td>S$2.65M</td><td>S$1.24M</td><td>88%</td></tr>
+<tr><td>Civic · Ops</td><td>Month 16</td><td>Month 20</td><td>S$288K</td><td>S$1.88M</td><td>S$1.10M</td><td>140%</td></tr>
+<tr><td>Manufacturing · Ops</td><td>Month 6</td><td>Month 10</td><td>S$52K</td><td>S$314K</td><td>S$89K</td><td>39%</td></tr>
+<tr><td>Ind. safety · Ops</td><td>Month 8.5</td><td>Month 12</td><td>S$85K</td><td>S$477K</td><td>S$182K</td><td>62%</td></tr>
+</table>
+<p style="font-size:24px;line-height:1.4;color:#5f6368">Months from first meeting. 3 years = pilot + 36 months of contract. Costs include marketing, sales effort, commission, hardware, delivery and run costs.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 37</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Breakeven is the month when the cash that STYL receives first covers all deal costs, from marketing onward. It comes soon after the PO because the customer pays software and set-up in advance (A7). Hardware is a service, so STYL pays for it on delivery. The anchors and tags cost little, so the cash out stays small. Civic and cargo have the largest cash out: they need many tags.</p></details></div><div class="slide" id="s38"><div class="num">38</div><div class="frame"><section id="seg-hc" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Example 1 · Now · Healthcare · Precision RTLS Ward</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">TTSH: 500 beds, purchase order at month 9</h2>
+<p style="font-size:26px;color:#5f6368">Director of Nursing, biomedical engineering, infection control, IT · Self-hosted · Singapore</p>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:9px 14px">
+<tr style="background:#f1f3f4"><th style="width:15%">Stage</th><th style="width:8%">Month</th><th style="width:38%">What happens</th><th style="width:17%">Teams</th><th style="width:22%">Customer pays</th></tr>
+<tr><td>0–1 Discovery</td><td>0–1</td><td>Ask the four first-meeting questions</td><td>BD, Sales</td><td>—</td></tr>
+<tr><td>2 Workshop</td><td>1–2</td><td>Simulate sizes one ward; agree success measures</td><td>Presales</td><td>Free</td></tr>
+<tr><td>3 Pilot contract</td><td>2–3</td><td>Ward Pilot signed; full price and reference clause</td><td>Sales, Legal</td><td>S$40,000 fixed</td></tr>
+<tr><td>4–5 Pilot</td><td>3–6</td><td>1 ward, up to 40 beds, 90 days, box on site</td><td>Service, Tech</td><td>In the fee</td></tr>
+<tr style="background:#e6f2ff"><td>6 Procurement</td><td>6–9</td><td>500 beds in bays, self-hosted; fee credited</td><td>Sales, Commercial</td><td>PO = final sale</td></tr>
+<tr><td>7 Rollout</td><td>9–15</td><td>250 anchors, 500 staff tags; hospital servers</td><td>Supply, Service</td><td>Year 1: S$544K</td></tr>
+<tr><td>8 Expand</td><td>15+</td><td>More wards; NCID; SingHealth cluster</td><td>CSM, Sales</td><td>S$500K / yr</td></tr>
+</table>
+<p style="font-size:25px;line-height:1.4;background:#e6f2ff;padding:18px 28px;border-radius:12px"><span style="font-weight:600">Breakeven month 13</span> (4 months after PO) · max cash out S$86K · 3-year STYL profit S$1.10M · <span style="font-weight:600">3-year ROI 227%</span> · 24-month margin 73%</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 38 · Illustrative, not a forecast</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Breakeven counts every cost from marketing and sales onward against cash received. Year 1 = software S$225,000 + platform fee S$95,000 + hardware service S$180,000 + set-up S$84,000 − pilot credit S$40,000 = S$544,000. That is S$83 per bed per month, the same as the CIO self-hosted example. Set-up: survey S$6,000, 250 anchors × S$200, nurse call link 20 engineer-days. Open with: "Find any nurse, doctor or critical device, to the bed, in seconds."</p></details></div><div class="slide" id="s39"><div class="num">39</div><div class="frame"><section id="seg-avn" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Example 2 · Now · Airport · Flow &amp; Wayfinding</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">CAG: one terminal, contract at month 11</h2>
+<p style="font-size:26px;color:#5f6368">Terminal operations head · 25,000 m² public area · Self-hosted in the CAG data centre · Passengers carry UWB phones</p>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:9px 14px">
+<tr style="background:#f1f3f4"><th style="width:15%">Stage</th><th style="width:8%">Month</th><th style="width:38%">What happens</th><th style="width:17%">Teams</th><th style="width:22%">Customer pays</th></tr>
+<tr><td>0–1 Discovery</td><td>0–0.5</td><td>Continue the current talks</td><td>Sales, BD</td><td>—</td></tr>
+<tr><td>2 Workshop</td><td>0.5–2</td><td>Simulate models one pier at peak</td><td>Presales</td><td>Free</td></tr>
+<tr><td>3 Pilot contract</td><td>2</td><td>Flow Pilot signed; reference clause</td><td>Sales, Legal</td><td>S$60,000 fixed</td></tr>
+<tr><td>4–5 Pilot</td><td>2–5</td><td>1 zone, up to 5,000 m², 90 days</td><td>Service, Tech</td><td>In the fee</td></tr>
+<tr style="background:#e6f2ff"><td>6 Tender</td><td>5–11</td><td>25,000 m², self-hosted; fee credited</td><td>Sales, Commercial</td><td>Award = final sale</td></tr>
+<tr><td>7 Rollout</td><td>11–20</td><td>200 anchors, 1,000 staff tags</td><td>Supply, Service</td><td>Year 1: S$498K</td></tr>
+<tr><td>8 Expand</td><td>20+</td><td>Other terminals; SATS, dnata cargo</td><td>CSM, Sales</td><td>S$470K / yr</td></tr>
+</table>
+<p style="font-size:25px;line-height:1.4;background:#e6f2ff;padding:18px 28px;border-radius:12px"><span style="font-weight:600">Breakeven month 15</span> (4 months after PO) · max cash out S$83K · 3-year STYL profit S$731K · <span style="font-weight:600">3-year ROI 93%</span> · 24-month margin 51%</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 39 · Illustrative, not a forecast</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Year 1 = software S$300,000 (25 × S$12,000) + platform fee S$95,000 + hardware S$75,000 + set-up S$88,000 − credit S$60,000. The 24/7 support share, S$93,000 a year, is the largest cost. Before the pilot, Engineering must confirm how many passenger phones one anchor can serve (A19): the badge limit is 8 tags at one time.</p></details></div><div class="slide" id="s40"><div class="num">40</div><div class="frame"><section id="seg-ports" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Example 3 · Next · Airport cargo · Precision RTLS Operations</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Cargo handler: purchase order at month 8</h2>
+<p style="font-size:26px;color:#5f6368">Map targets SATS and dnata · 2 sites, cloud · 12,000 m² indoor + 8,000 m² apron (hardened)</p>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:9px 14px">
+<tr style="background:#f1f3f4"><th style="width:15%">Stage</th><th style="width:8%">Month</th><th style="width:38%">What happens</th><th style="width:17%">Teams</th><th style="width:22%">Customer pays</th></tr>
+<tr><td>0–1 Discovery</td><td>0–0.5</td><td>Introduction through CAG</td><td>Sales, BD</td><td>—</td></tr>
+<tr><td>2 Workshop</td><td>0.5–1.5</td><td>Simulate sizes one cargo shed</td><td>Presales</td><td>Free</td></tr>
+<tr><td>3 Pilot contract</td><td>1.5</td><td>Operations Pilot signed</td><td>Sales</td><td>S$25,000 fixed</td></tr>
+<tr><td>4–5 Pilot</td><td>1.5–4.5</td><td>1 shed, up to 2,000 m², 90 days</td><td>Service</td><td>In the fee</td></tr>
+<tr style="background:#e6f2ff"><td>6 Procurement</td><td>4.5–8</td><td>2 sites, 20 units; fee credited</td><td>Sales, Commercial</td><td>PO = final sale</td></tr>
+<tr><td>7 Rollout</td><td>8–15</td><td>160 anchors (64 hardened), 3,000 tags</td><td>Supply, Service</td><td>Year 1: S$494K</td></tr>
+<tr><td>8 Expand</td><td>15+</td><td>Second handler; PSA, Jurong Port</td><td>CSM, Sales</td><td>S$264K / yr + tags</td></tr>
+</table>
+<p style="font-size:25px;line-height:1.4;background:#e6f2ff;padding:18px 28px;border-radius:12px"><span style="font-weight:600">Breakeven month 12</span> (4 months after PO) · max cash out S$188K · 3-year STYL profit S$553K · <span style="font-weight:600">3-year ROI 92%</span> · 24-month margin 50%</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 40 · Illustrative, not a forecast</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Year 1 = software S$180,000 + hardware service S$84,000 + set-up S$78,000 + 222 tag packs S$178,000 − credit S$25,000. Cargo needs many more tags than the allowance of 40 per unit, so extra packs are a large one-time line. Tags are lost at about 20% a year; the customer buys packs to replace them. The apron needs hardened kit, which Engineering has not tested yet (A17).</p></details></div><div class="slide" id="s41"><div class="num">41</div><div class="frame"><section id="seg-transit" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Example 4 · Next · Transit · Hands-free Gates</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">LTA: hands-free gates, contract at month 17</h2>
+<p style="font-size:26px;color:#5f6368">Through NCS or ST Engineering · 720 gates (10 stations, 300 buses) · Self-hosted · Riders carry UWB phones</p>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:9px 14px">
+<tr style="background:#f1f3f4"><th style="width:15%">Stage</th><th style="width:8%">Month</th><th style="width:38%">What happens</th><th style="width:17%">Teams</th><th style="width:22%">Customer pays</th></tr>
+<tr><td>0–1 Discovery</td><td>0–2</td><td>Integrator introduction; acquirer named</td><td>BD, Sales</td><td>—</td></tr>
+<tr><td>2 Gate study</td><td>2–6</td><td>Paid Simulate study: gate line at 40 a minute</td><td>Presales, Product</td><td>S$28,000 study</td></tr>
+<tr><td>3 Pilot contract</td><td>6</td><td>Gate Pilot signed; NXP co-funding asked</td><td>Sales, BD, Legal</td><td>S$120,000 fixed</td></tr>
+<tr><td>4–5 Pilot</td><td>6–10</td><td>Up to 6 gates, 120 days, fare link tested</td><td>Tech, Service</td><td>In the fee</td></tr>
+<tr style="background:#e6f2ff"><td>6 Procurement</td><td>10–17</td><td>720 gates; fee credited</td><td>Sales, Commercial</td><td>Award = final sale</td></tr>
+<tr><td>7 Rollout</td><td>17–29</td><td>1,210 hardened anchors</td><td>Supply, installers</td><td>Year 1: S$1.22M</td></tr>
+<tr><td>8 Expand</td><td>29+</td><td>More lines; SBS Transit; Japan path</td><td>CSM, Sales</td><td>S$642K / yr</td></tr>
+</table>
+<p style="font-size:25px;line-height:1.4;background:#e6f2ff;padding:18px 28px;border-radius:12px"><span style="font-weight:600">Breakeven month 21</span> (4 months after PO) · max cash out S$255K · 3-year STYL profit S$1.24M · <span style="font-weight:600">3-year ROI 88%</span> · 24-month margin 47%</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 41 · Illustrative, not a forecast</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Year 1 = software S$288,000 (720 × S$400) + platform fee S$95,000 + hardware S$259,000 + set-up S$694,000 − credit S$120,000. Set-up is large: 1,210 hardened anchors × S$400 and 150 engineer-days for the fare and acquirer links. Engineering must confirm the gate throughput with the limit of 8 tags for each anchor (A13, A18) before the study ends.</p></details></div><div class="slide" id="s42"><div class="num">42</div><div class="frame"><section id="seg-gov" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Example 5 · Next · Civic estates · Precision RTLS Operations</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">MOE through DBS: 5 schools, contract at month 16</h2>
+<p style="font-size:26px;color:#5f6368">Estate security · 30,000 m² · One self-hosted deployment for 5 sites · Staff with security clearance</p>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:9px 14px">
+<tr style="background:#f1f3f4"><th style="width:15%">Stage</th><th style="width:8%">Month</th><th style="width:38%">What happens</th><th style="width:17%">Teams</th><th style="width:22%">Customer pays</th></tr>
+<tr><td>0–1 Discovery</td><td>0–1.5</td><td>DBS introduction; 5 sites</td><td>BD, Sales</td><td>—</td></tr>
+<tr><td>2 Workshop</td><td>1.5–2</td><td>Simulate sizes one building</td><td>Presales</td><td>Free</td></tr>
+<tr><td>Security review</td><td>2–6</td><td>Accreditation pack; cleared staff named</td><td>Tech, Presales</td><td>—</td></tr>
+<tr><td>3–5 Pilot</td><td>6–9</td><td>1 zone, 90 days, box on site</td><td>Service (cleared)</td><td>S$25,000 fixed</td></tr>
+<tr style="background:#e6f2ff"><td>6 Tender</td><td>9–16</td><td>Formal tender; fee credited</td><td>Sales, Commercial</td><td>Award = final sale</td></tr>
+<tr><td>7 Rollout</td><td>16–25</td><td>240 anchors, 5,000 tags</td><td>Supply, Service</td><td>Year 1: S$868K</td></tr>
+<tr><td>8 Expand</td><td>25+</td><td>More schools; HDB, JTC, GovTech</td><td>CSM, Sales</td><td>S$455K / yr</td></tr>
+</table>
+<p style="font-size:25px;line-height:1.4;background:#e6f2ff;padding:18px 28px;border-radius:12px"><span style="font-weight:600">Breakeven month 20</span> (4 months after PO) · max cash out S$288K · 3-year STYL profit S$1.10M · <span style="font-weight:600">3-year ROI 140%</span> · 24-month margin 61%</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 42 · Illustrative, not a forecast</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Year 1 = software S$270,000 + platform fee S$95,000 + hardware S$90,000 + set-up S$134,000 + 380 tag packs S$304,000 − credit S$25,000. One deployment serves all 5 schools, so the platform fee is paid once. On the product map, civic opens with Device Ops or Occupancy, and RTLS follows. This example is the UWB path.</p></details></div><div class="slide" id="s43"><div class="num">43</div><div class="frame"><section id="seg-mfg" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Example 6 · Later · Outside the map · Manufacturing · Operations RTLS</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">3PL warehouse: purchase order at month 6</h2>
+<p style="font-size:26px;color:#5f6368">Operations manager · 6,000 m² · Cloud · 800 tags on forklifts and totes</p>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:9px 14px">
+<tr style="background:#f1f3f4"><th style="width:15%">Stage</th><th style="width:8%">Month</th><th style="width:38%">What happens</th><th style="width:17%">Teams</th><th style="width:22%">Customer pays</th></tr>
+<tr><td>0–1 Discovery</td><td>0–0.5</td><td>Forklifts, totes, one site</td><td>Sales</td><td>—</td></tr>
+<tr><td>2 Workshop</td><td>0.5–1</td><td>Simulate sizes one aisle block</td><td>Presales</td><td>Free</td></tr>
+<tr><td>3–5 Pilot</td><td>1–4</td><td>1 zone, 90 days</td><td>Sales, Service</td><td>S$25,000 fixed</td></tr>
+<tr style="background:#e6f2ff"><td>6 Procurement</td><td>4–6</td><td>6 units; minimum fee applies</td><td>Sales, Commercial</td><td>PO = final sale</td></tr>
+<tr><td>7 Rollout</td><td>6–11</td><td>48 anchors, 800 tags</td><td>Supply, Service</td><td>Year 1: S$120K</td></tr>
+<tr><td>8 Expand</td><td>11+</td><td>Other warehouses of the operator</td><td>CSM, Sales</td><td>S$78K / yr</td></tr>
+</table>
+<p style="font-size:25px;line-height:1.4;background:#e6f2ff;padding:18px 28px;border-radius:12px"><span style="font-weight:600">Breakeven month 10</span> (4 months after PO) · max cash out S$52K · 3-year STYL profit S$89K · <span style="font-weight:600">3-year ROI 39%</span> · 24-month margin 35%</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 43 · Illustrative, not a forecast</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>The S$60,000 minimum software fee applies (6 × S$9,000 = S$54,000). The 24-month margin is 35%: above the 30% floor, but below the 40% target. This is the small-site risk in the CIO stress test: one cloud site has a fixed cost of S$3,200 a month. Sell to operators with several sites, or keep this market for later.</p></details></div><div class="slide" id="s44"><div class="num">44</div><div class="frame"><section id="seg-safety" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Example 7 · Later · Outside the map · Industrial safety · Operations RTLS</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Construction site: purchase order at month 8.5</h2>
+<p style="font-size:26px;color:#5f6368">HSE officer · 8,000 m², hardened kit · Cloud · Sites without hazardous-area rules only</p>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:9px 14px">
+<tr style="background:#f1f3f4"><th style="width:15%">Stage</th><th style="width:8%">Month</th><th style="width:38%">What happens</th><th style="width:17%">Teams</th><th style="width:22%">Customer pays</th></tr>
+<tr><td>0–1 Discovery</td><td>0–0.5</td><td>HSE officer; site without hazardous areas</td><td>Sales</td><td>—</td></tr>
+<tr><td>2 Workshop</td><td>0.5–1.5</td><td>Workshop with HSE and site operations</td><td>Presales</td><td>Free</td></tr>
+<tr><td>3–5 Pilot</td><td>1.5–4.5</td><td>Hardened zone, 90 days</td><td>Sales, Service</td><td>S$35,000 fixed</td></tr>
+<tr style="background:#e6f2ff"><td>6 Procurement</td><td>4.5–8.5</td><td>8 hardened units; fee credited</td><td>Sales, Commercial</td><td>PO = final sale</td></tr>
+<tr><td>7 Rollout</td><td>8.5–15</td><td>64 hardened anchors, 640 hardened tags</td><td>Supply, Service</td><td>Year 1: S$182K</td></tr>
+<tr><td>8 Expand</td><td>15+</td><td>Other sites of the contractor</td><td>CSM, Sales</td><td>S$120K / yr</td></tr>
+</table>
+<p style="font-size:25px;line-height:1.4;background:#e6f2ff;padding:18px 28px;border-radius:12px"><span style="font-weight:600">Breakeven month 12</span> (3.5 months after PO) · max cash out S$85K · 3-year STYL profit S$182K · <span style="font-weight:600">3-year ROI 62%</span> · 24-month margin 43%</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 44 · Illustrative, not a forecast</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Year 1 = software S$72,000 + hardware service S$48,000 + set-up S$46,000 + 32 hardened tag packs S$51,000 − credit S$35,000. Sell alerts only, never machine interlock. We have no hazardous-area certification. Engineering has not tested the hardened kit (A17).</p></details></div><div class="slide" id="s45"><div class="num">45</div><div class="frame"><section id="div-7" data-transition="fade" style="background:#202124;color:#f8f9fa;font-family:'Onest', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<p style="font-size:120px;font-weight:600;color:#6099ff;line-height:1.1">07</p>
+<h2 style="font-size:80px;font-weight:600;line-height:1.1;color:#f8f9fa">Margins and checks</h2>
+<p style="font-size:36px;line-height:1.4;color:#dadce0;width:1400px">The 30% floor, the 40% target, the stress test and the price benchmark</p>
+</section>
+</div></div><div class="slide" id="s46"><div class="num">46</div><div class="frame"><section id="margins" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Margin checks</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Every example passes the 30% floor; one misses the 40% target</h2>
+<p style="font-size:24px;font-weight:600;color:#9a6700">Internal only · margins exclude sales cost</p>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:8px 12px">
+<tr style="background:#f1f3f4"><th style="width:24%">Example</th><th style="width:24%">Price per unit per month</th><th style="width:16%">Quote margin, 36 months</th><th style="width:16%">Customer margin, 24 months</th><th style="width:20%">Check</th></tr>
+<tr><td>Healthcare · Ward</td><td>S$83 per bed</td><td>77%</td><td>73%</td><td style="color:#1a7f4b">Pass</td></tr>
+<tr><td>Airport · Flow</td><td>S$1,567 per 1,000 m²</td><td>56%</td><td>51%</td><td style="color:#1a7f4b">Pass</td></tr>
+<tr><td>Airport cargo · Ops</td><td>S$1,100 per 1,000 m²</td><td>55%</td><td>50%</td><td style="color:#1a7f4b">Pass</td></tr>
+<tr><td>Transit · Gates</td><td>S$74 per gate</td><td>54%</td><td>47%</td><td style="color:#1a7f4b">Pass</td></tr>
+<tr><td>Civic · Ops</td><td>S$1,264 per 1,000 m²</td><td>66%</td><td>61%</td><td style="color:#1a7f4b">Pass</td></tr>
+<tr><td>Manufacturing · Ops</td><td>S$1,083 per 1,000 m²</td><td>42%</td><td>35%</td><td style="color:#cc0000">Floor met; below target</td></tr>
+<tr><td>Ind. safety · Ops</td><td>S$1,250 per 1,000 m²</td><td>52%</td><td>43%</td><td style="color:#1a7f4b">Pass</td></tr>
+</table>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:18px 24px;border-radius:16px"><h3 style="font-size:27px;font-weight:600">Floor: 30% on each quote</h3><p style="font-size:23px;line-height:1.4;color:#5f6368">Finance checks each quote and each discount.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:18px 24px;border-radius:16px"><h3 style="font-size:27px;font-weight:600">Target: 40% for each customer over 24 months</h3><p style="font-size:23px;line-height:1.4;color:#5f6368">The pilot and the set-up count in the 24 months.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:18px 24px;border-radius:16px"><h3 style="font-size:27px;font-weight:600">Unit costs are low</h3><p style="font-size:23px;line-height:1.4;color:#5f6368">A Ward bed costs about S$13 a month to serve (CIO).</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 46</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Quote margin covers the 36-month contract without the pilot. Customer margin covers the pilot and the first 24 months, as the CIO guide asks. Both exclude sales and marketing cost. Manufacturing misses the target because one small cloud site carries the fixed cloud cost of S$38,400 a year against S$78,000 of recurring revenue.</p></details></div><div class="slide" id="s47"><div class="num">47</div><div class="frame"><section id="stress" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Stress test · Ward (CIO)</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">The margin stays above 30% when the room types are correct</h2>
+</div>
+<table style="font-size:23px;color:#202124;border:1px solid #dadce0;padding:8px 12px">
+<tr style="background:#f1f3f4"><th style="width:58%">What goes wrong (500 beds, cloud, unless stated)</th><th style="width:14%">Revenue / bed / month</th><th style="width:14%">Cost / bed / month</th><th style="width:14%">Margin</th></tr>
+<tr><td>Nothing (base case)</td><td>S$67.50</td><td>S$13.25</td><td>80%</td></tr>
+<tr><td>Hardware +50%, all 1–2 bed rooms, AI cost 2×, 20% discount</td><td>S$78.00</td><td>S$26.75</td><td>66%</td></tr>
+<tr><td>Sales error: rooms sold at the bay rate, with the three problems above</td><td>S$54.00</td><td>S$26.75</td><td>50%</td></tr>
+<tr><td>Small site: 100 beds, all four problems</td><td>S$98.00</td><td>S$54.75</td><td>44%</td></tr>
+<tr><td>Sales error on a small site: 100 beds</td><td>S$74.00</td><td>S$54.75</td><td><span style="color:#cc0000">26%</span></td></tr>
+<tr><td>Self-hosted, 100 beds, three problems</td><td>S$177.17</td><td>S$88.92</td><td>50%</td></tr>
+</table>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:18px 24px;border-radius:16px"><h3 style="font-size:27px;font-weight:600">Large sites are safe</h3><p style="font-size:23px;line-height:1.4;color:#5f6368">At 500 beds, the margin stays at 50% or more when all four problems occur.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:18px 24px;border-radius:16px"><h3 style="font-size:27px;font-weight:600">The risk is small cloud sites</h3><p style="font-size:23px;line-height:1.4;color:#5f6368">A sales error on room types plus a discount goes below 30%.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:18px 24px;border-radius:16px"><h3 style="font-size:27px;font-weight:600">Rules</h3><p style="font-size:23px;line-height:1.4;color:#5f6368">The survey confirms room types before the quote. Each discount gets a margin check.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 47</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>This is the CIO stress test without changes (Product Team Brief, page 4). The same risk applies to Operations RTLS: our manufacturing example (one small cloud site) has a 24-month margin of 35%. The minimum software fee of S$60,000 protects small sites. Self-hosted sites are safe at all sizes: the platform fee pays the fixed cost.</p></details></div><div class="slide" id="s48"><div class="num">48</div><div class="frame"><section id="benchmark" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Price benchmark · Ward</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Our list price is at or below the closest UWB competitor</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px"><p style="font-size:22px;line-height:1.4;color:#5f6368">S$ per bed per month, set-up included for Proxximos. £1 = S$1.72. Confidence: Certain (public G-Cloud 15 list).</p><div style="display:flex;flex-direction:row;align-items:center;gap:16px"><p style="font-size:23px;width:620px">Proxximos: 1 tag per bed (not permitted by their rules)</p><div style="width:173px;height:34px;background:#bdc1c6;border-radius:4px"></div><p style="font-size:23px;font-weight:600">S$28</p></div><div style="display:flex;flex-direction:row;align-items:center;gap:16px"><p style="font-size:23px;width:620px">Proxximos: dense ward, 6-bed bays</p><div style="width:446px;height:34px;background:#bdc1c6;border-radius:4px"></div><p style="font-size:23px;font-weight:600">S$72</p></div><div style="display:flex;flex-direction:row;align-items:center;gap:16px"><p style="font-size:23px;width:620px">Proxximos: NHS ward, net area</p><div style="width:514px;height:34px;background:#bdc1c6;border-radius:4px"></div><p style="font-size:23px;font-weight:600">S$83</p></div><div style="display:flex;flex-direction:row;align-items:center;gap:16px"><p style="font-size:23px;width:620px">Proxximos: NHS ward, gross area</p><div style="width:799px;height:34px;background:#bdc1c6;border-radius:4px"></div><p style="font-size:23px;font-weight:600">S$129</p></div><div style="display:flex;flex-direction:row;align-items:center;gap:16px"><p style="font-size:23px;width:620px">STYL Ward, cloud, bays</p><div style="width:418px;height:34px;background:#005bb6;border-radius:4px"></div><p style="font-size:23px;font-weight:600">S$67.5</p></div><div style="display:flex;flex-direction:row;align-items:center;gap:16px"><p style="font-size:23px;width:620px">STYL Ward, cloud, 1–2 bed rooms</p><div style="width:604px;height:34px;background:#005bb6;border-radius:4px"></div><p style="font-size:23px;font-weight:600">S$97.5</p></div><div style="display:flex;flex-direction:row;align-items:center;gap:16px"><p style="font-size:23px;width:620px">STYL Ward, self-hosted, bays</p><div style="width:514px;height:34px;background:#005bb6;border-radius:4px"></div><p style="font-size:23px;font-weight:600">S$83</p></div></div>
+<p style="font-size:24px;line-height:1.4;background:#e6f2ff;padding:18px 28px;border-radius:12px"><span style="font-weight:600">Value is larger than price: </span>a 500-bed hospital gets back about 27,000 nurse hours a year (10 minutes a nurse a shift). That is about S$900,000 a year. The cloud price is S$405,000 a year.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 48</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Source: CIO Product Team Brief, page 3. Proxximos G-Cloud 15 price list and service definition, January 2026; NHS HBN 04-01. Their rules require at least 1,000 tags and 15 tags for each 100 m², so the hospital pays by floor area, not by bed. Their tag runs 2 years without a charge; ours needs a charge each week but gives 2 positions each second (theirs: 1 each 10 seconds). In Japan, room-level BLE costs much less: about S$2 per bed. No benchmark exists yet for Operations, Flow or Gates (stage 3).</p></details></div><div class="slide" id="s49"><div class="num">49</div><div class="frame"><section id="cash" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Hardware as a service · Cash</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">STYL buys the hardware; the monthly fee pays it back</h2>
+</div>
+<table style="font-size:24px;color:#202124;border:1px solid #dadce0;padding:8px 12px">
+<tr style="background:#f1f3f4"><th style="width:24%">Example</th><th style="width:15%">Hardware we buy</th><th style="width:14%">Set-up cost</th><th style="width:16%">Hardware fee, year 1</th><th style="width:14%">Max cash out</th><th style="width:17%">Breakeven after PO</th></tr>
+<tr><td>Healthcare · Ward</td><td>S$45K</td><td>S$42K</td><td>S$180K</td><td>S$86K</td><td>4 months</td></tr>
+<tr><td>Airport · Flow</td><td>S$60K</td><td>S$44K</td><td>S$75K</td><td>S$83K</td><td>4 months</td></tr>
+<tr><td>Airport cargo · Ops</td><td>S$154K</td><td>S$39K</td><td>S$84K</td><td>S$188K</td><td>4 months</td></tr>
+<tr><td>Transit · Gates</td><td>S$242K</td><td>S$347K</td><td>S$259K</td><td>S$255K</td><td>4 months</td></tr>
+<tr><td>Civic · Ops</td><td>S$224K</td><td>S$67K</td><td>S$90K</td><td>S$288K</td><td>4 months</td></tr>
+<tr><td>Manufacturing · Ops</td><td>S$37K</td><td>S$11K</td><td>S$18K</td><td>S$52K</td><td>4 months</td></tr>
+<tr><td>Ind. safety · Ops</td><td>S$64K</td><td>S$23K</td><td>S$48K</td><td>S$85K</td><td>3.5 months</td></tr>
+</table>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:18px 24px;border-radius:16px"><h3 style="font-size:27px;font-weight:600">Low exposure</h3><p style="font-size:23px;line-height:1.4;color:#5f6368">Our anchor costs S$100 and our tag S$40. The largest outlay is for tags: civic and cargo.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:18px 24px;border-radius:16px"><h3 style="font-size:27px;font-weight:600">Fast payback</h3><p style="font-size:23px;line-height:1.4;color:#5f6368">Software and set-up are paid in advance. The deal is cash positive about 4 months after the PO.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f1f3f4;padding:18px 24px;border-radius:16px"><h3 style="font-size:27px;font-weight:600">Risk</h3><p style="font-size:23px;line-height:1.4;color:#5f6368">A customer that stops early leaves STYL with hardware. Put an early-exit fee in the contract.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 49</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>The CIO framework makes hardware a monthly service in every quote. This replaces the v0.9 comparison of hardware sale, HaaS Hardware and HaaS All-in. STYL now carries the hardware on its balance sheet. With the CIO costs, a 500-bed hospital needs only S$45,000 of hardware. Early exit: the remaining hardware fees, or the unrecovered cost (from v0.9, for decision).</p></details></div><div class="slide" id="s50"><div class="num">50</div><div class="frame"><section id="div-8" data-transition="fade" style="background:#202124;color:#f8f9fa;font-family:'Onest', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<p style="font-size:120px;font-weight:600;color:#6099ff;line-height:1.1">08</p>
+<h2 style="font-size:80px;font-weight:600;line-height:1.1;color:#f8f9fa">What we must finalise</h2>
+<p style="font-size:36px;line-height:1.4;color:#dadce0;width:1400px">50 assumptions with source, confidence and status; the changes from v0.9; 12 open items</p>
+</section>
+</div></div><div class="slide" id="s51"><div class="num">51</div><div class="frame"><section id="assume-1" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Assumptions register · 1 of 5</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Commercial rules</h2>
+<p style="font-size:26px;color:#5f6368">Confidence: <span style="color:#1a7f4b">Certain</span> = primary source · <span style="color:#9a6700">Likely</span> = good secondary source · <span style="color:#cc0000">Guessing</span> = my judgement; never in a Sales Sheet</p>
+</div>
+<table style="font-size:21px;color:#202124;border:1px solid #dadce0;padding:5px 10px">
+<tr style="background:#f1f3f4"><th style="width:6%">ID</th><th style="width:17%">Assumption</th><th style="width:44%">Value used</th><th style="width:13%">Source</th><th style="width:10%">Confidence</th><th style="width:10%">Status</th></tr>
+<tr><td>A1</td><td>Currency</td><td>SGD before GST; US$1 = S$1.28 for USD inputs</td><td>CIO</td><td style="color:#1a7f4b">Certain</td><td style="color:#1a7f4b">Confirmed</td></tr>
+<tr><td>A2</td><td>Price structure</td><td>Software per unit per year + hardware service per unit per month + set-up</td><td>CIO</td><td style="color:#1a7f4b">Certain</td><td style="color:#1a7f4b">Confirmed</td></tr>
+<tr><td>A3</td><td>Price units</td><td>Bed (Ward); 1,000 m² (Operations, Flow); gate (Gates)</td><td>CIO, mine</td><td style="color:#cc0000">Guessing</td><td style="color:#6b4c9a">For decision</td></tr>
+<tr><td>A4</td><td>Packages</td><td>3 maximum, one "start here"; Ward: one package, two host options</td><td>CIO</td><td style="color:#1a7f4b">Certain</td><td style="color:#1a7f4b">Confirmed</td></tr>
+<tr><td>A5</td><td>Platform fee</td><td>S$95,000 per self-hosted deployment per year; one deployment can serve several sites</td><td>CIO, mine</td><td style="color:#9a6700">Likely</td><td style="color:#cc0000">To verify</td></tr>
+<tr><td>A6</td><td>Minimum fee</td><td>S$60,000 per site per year; Gates S$250,000 per operator</td><td>CIO, mine</td><td style="color:#9a6700">Likely</td><td style="color:#cc0000">To verify</td></tr>
+<tr><td>A7</td><td>Contract and terms</td><td>3 years; software yearly in advance; hardware monthly; set-up on delivery, net 30</td><td>CIO, mine</td><td style="color:#9a6700">Likely</td><td style="color:#6b4c9a">My assumption</td></tr>
+<tr><td>A8</td><td>Margin rules</td><td>No quote below 30%; target 40% for each customer over 24 months</td><td>CIO</td><td style="color:#1a7f4b">Certain</td><td style="color:#1a7f4b">Confirmed</td></tr>
+<tr><td>A9</td><td>Discounts</td><td>Sales Director up to 20%; CEO above; none on minimum or platform fee</td><td>CIO</td><td style="color:#1a7f4b">Certain</td><td style="color:#1a7f4b">Confirmed</td></tr>
+<tr><td>A10</td><td>Pilot rule</td><td>Fixed fee, fixed end date; full price in contract; fee credited to year 1</td><td>CIO</td><td style="color:#1a7f4b">Certain</td><td style="color:#1a7f4b">Confirmed</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 51</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Every price, cost and time in this deck traces to one of these 50 assumptions. v0.10 renumbered the register around the CIO framework. The next pages list what changed from v0.9. Source: CIO = CIO Office documents of 3 Oct 2026; JC = management inputs; Map = product map; Mine = my assumption, for you to refine.</p></details></div><div class="slide" id="s52"><div class="num">52</div><div class="frame"><section id="assume-2" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Assumptions register · 2 of 5</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Product facts (stage 2)</h2>
+<p style="font-size:26px;color:#5f6368">Confidence: <span style="color:#1a7f4b">Certain</span> = primary source · <span style="color:#9a6700">Likely</span> = good secondary source · <span style="color:#cc0000">Guessing</span> = my judgement; never in a Sales Sheet</p>
+</div>
+<table style="font-size:21px;color:#202124;border:1px solid #dadce0;padding:5px 10px">
+<tr style="background:#f1f3f4"><th style="width:6%">ID</th><th style="width:17%">Assumption</th><th style="width:44%">Value used</th><th style="width:13%">Source</th><th style="width:10%">Confidence</th><th style="width:10%">Status</th></tr>
+<tr><td>A11</td><td>Accuracy</td><td>±20 cm, badge on a person, ward with beds and walls</td><td>CIO, Eng.</td><td style="color:#1a7f4b">Certain</td><td style="color:#1a7f4b">Confirmed</td></tr>
+<tr><td>A12</td><td>Update rate</td><td>2 positions each second</td><td>CIO, Eng.</td><td style="color:#1a7f4b">Certain</td><td style="color:#1a7f4b">Confirmed</td></tr>
+<tr><td>A13</td><td>Capacity</td><td>1 anchor serves 8 tags at one time</td><td>CIO, Eng.</td><td style="color:#1a7f4b">Certain</td><td style="color:#1a7f4b">Confirmed</td></tr>
+<tr><td>A14</td><td>Staff badge</td><td>Charge each week (2-week test in progress); not for equipment</td><td>CIO, Eng.</td><td style="color:#1a7f4b">Certain</td><td style="color:#1a7f4b">Confirmed</td></tr>
+<tr><td>A15</td><td>Limits</td><td>Not medical grade; no help button on the badge</td><td>CIO</td><td style="color:#1a7f4b">Certain</td><td style="color:#1a7f4b">Confirmed</td></tr>
+<tr><td>A16</td><td>Radio</td><td>UWB channel 9; Singapore approved; Japan needs 技適 per device</td><td>CIO, JC</td><td style="color:#1a7f4b">Certain</td><td style="color:#cc0000">To verify</td></tr>
+<tr><td>A17</td><td>Hardened kit</td><td>Cost 2× standard; not tested by Engineering</td><td>Mine</td><td style="color:#cc0000">Guessing</td><td style="color:#cc0000">To verify</td></tr>
+<tr><td>A18</td><td>Gate speed</td><td>40 people a minute, decision in 200 ms; not tested with the 8-tag limit</td><td>Map, mine</td><td style="color:#cc0000">Guessing</td><td style="color:#cc0000">To verify</td></tr>
+<tr><td>A19</td><td>Phones per anchor</td><td>Number of passenger phones one anchor serves: not confirmed</td><td>Mine</td><td style="color:#cc0000">Guessing</td><td style="color:#cc0000">To verify</td></tr>
+<tr><td>A20</td><td>Supply</td><td>Lead time 3 months; MOQ 50 anchors / 100 tags; 1-year warranty; 2% spares</td><td>JC</td><td style="color:#1a7f4b">Certain</td><td style="color:#1a7f4b">Confirmed</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 52</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Every price, cost and time in this deck traces to one of these 50 assumptions. v0.10 renumbered the register around the CIO framework. The next pages list what changed from v0.9. Source: CIO = CIO Office documents of 3 Oct 2026; JC = management inputs; Map = product map; Mine = my assumption, for you to refine.</p></details></div><div class="slide" id="s53"><div class="num">53</div><div class="frame"><section id="assume-3" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Assumptions register · 3 of 5</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Prices by product</h2>
+<p style="font-size:26px;color:#5f6368">Confidence: <span style="color:#1a7f4b">Certain</span> = primary source · <span style="color:#9a6700">Likely</span> = good secondary source · <span style="color:#cc0000">Guessing</span> = my judgement; never in a Sales Sheet</p>
+</div>
+<table style="font-size:21px;color:#202124;border:1px solid #dadce0;padding:5px 10px">
+<tr style="background:#f1f3f4"><th style="width:6%">ID</th><th style="width:17%">Assumption</th><th style="width:44%">Value used</th><th style="width:13%">Source</th><th style="width:10%">Confidence</th><th style="width:10%">Status</th></tr>
+<tr><td>A21</td><td>Ward software</td><td>S$450 per bed per year</td><td>CIO</td><td style="color:#1a7f4b">Certain</td><td style="color:#cc0000">To verify</td></tr>
+<tr><td>A22</td><td>Ward hardware</td><td>S$30 per bed per month in bays; S$60 in 1–2 bed rooms; 1 tag per bed</td><td>CIO</td><td style="color:#1a7f4b">Certain</td><td style="color:#1a7f4b">Confirmed</td></tr>
+<tr><td>A23</td><td>Extra tags</td><td>S$800 for 10; hardened S$1,600 for 10</td><td>CIO, mine</td><td style="color:#9a6700">Likely</td><td style="color:#1a7f4b">Confirmed</td></tr>
+<tr><td>A24</td><td>Ward pilot</td><td>1 ward, up to 40 beds, 90 days, S$40,000</td><td>CIO</td><td style="color:#1a7f4b">Certain</td><td style="color:#1a7f4b">Confirmed</td></tr>
+<tr><td>A25</td><td>Operations RTLS</td><td>S$9,000 per 1,000 m² a year; S$250 (hardened S$500) a month; 8 anchors, 40 tags</td><td>Mine</td><td style="color:#cc0000">Guessing</td><td style="color:#6b4c9a">For decision</td></tr>
+<tr><td>A26</td><td>Flow</td><td>S$12,000 per 1,000 m² a year; S$250 a month; 8 anchors, 40 staff tags</td><td>Mine</td><td style="color:#cc0000">Guessing</td><td style="color:#6b4c9a">For decision</td></tr>
+<tr><td>A27</td><td>Gates</td><td>S$400 per gate a year; S$30 a month; 2 hardened anchors per gate</td><td>Mine</td><td style="color:#cc0000">Guessing</td><td style="color:#6b4c9a">For decision</td></tr>
+<tr><td>A28</td><td>Other pilots</td><td>Ops S$25,000 (hardened S$35,000); Flow S$60,000; Gates S$120,000; study S$28,000</td><td>Mine</td><td style="color:#cc0000">Guessing</td><td style="color:#6b4c9a">For decision</td></tr>
+<tr><td>A29</td><td>Set-up rates</td><td>Survey S$6,000; S$200 per anchor (hardened S$400); S$1,400 per engineer-day</td><td>CIO, JC, mine</td><td style="color:#9a6700">Likely</td><td style="color:#cc0000">To verify</td></tr>
+<tr><td>A30</td><td>NXP licence</td><td>S$32,000–58,000 a year</td><td>JC</td><td style="color:#1a7f4b">Certain</td><td style="color:#005bb6">Approved</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 53</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Every price, cost and time in this deck traces to one of these 50 assumptions. v0.10 renumbered the register around the CIO framework. The next pages list what changed from v0.9. Source: CIO = CIO Office documents of 3 Oct 2026; JC = management inputs; Map = product map; Mine = my assumption, for you to refine.</p></details></div><div class="slide" id="s54"><div class="num">54</div><div class="frame"><section id="assume-4" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Assumptions register · 4 of 5</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Costs</h2>
+<p style="font-size:26px;color:#5f6368">Confidence: <span style="color:#1a7f4b">Certain</span> = primary source · <span style="color:#9a6700">Likely</span> = good secondary source · <span style="color:#cc0000">Guessing</span> = my judgement; never in a Sales Sheet</p>
+</div>
+<table style="font-size:21px;color:#202124;border:1px solid #dadce0;padding:5px 10px">
+<tr style="background:#f1f3f4"><th style="width:6%">ID</th><th style="width:17%">Assumption</th><th style="width:44%">Value used</th><th style="width:13%">Source</th><th style="width:10%">Confidence</th><th style="width:10%">Status</th></tr>
+<tr><td>A31</td><td>Hardware cost</td><td>Anchor S$100; tag S$40</td><td>CIO</td><td style="color:#9a6700">Likely</td><td style="color:#cc0000">To verify</td></tr>
+<tr><td>A32</td><td>Install cost</td><td>S$600 a day; 6 anchors a day (3 hardened): S$100 / S$200 per anchor</td><td>JC</td><td style="color:#9a6700">Likely</td><td style="color:#cc0000">To verify</td></tr>
+<tr><td>A33</td><td>Engineer-day cost</td><td>S$700 (US$550)</td><td>JC</td><td style="color:#1a7f4b">Certain</td><td style="color:#005bb6">Approved</td></tr>
+<tr><td>A34</td><td>Cloud site</td><td>S$3,200 a month: backend S$2,000 + support S$1,200</td><td>CIO</td><td style="color:#9a6700">Likely</td><td style="color:#cc0000">To verify</td></tr>
+<tr><td>A35</td><td>Self-hosted</td><td>S$86,600 a year: Solace S$65,000 + support S$21,600</td><td>CIO</td><td style="color:#9a6700">Likely</td><td style="color:#cc0000">To verify</td></tr>
+<tr><td>A36</td><td>Spares, repairs</td><td>10% of hardware cost each year</td><td>CIO</td><td style="color:#cc0000">Guessing</td><td style="color:#cc0000">To verify</td></tr>
+<tr><td>A37</td><td>AI questions</td><td>S$0.10 each; 30 per bed per month on cloud Ward</td><td>CIO</td><td style="color:#cc0000">Guessing</td><td style="color:#cc0000">To verify</td></tr>
+<tr><td>A38</td><td>24/7 support</td><td>S$93,000 a year for each Flow or Gates account</td><td>Mine</td><td style="color:#cc0000">Guessing</td><td style="color:#6b4c9a">For decision</td></tr>
+<tr><td>A39</td><td>Ward pilot cost</td><td>S$21,700: box S$6,100, support S$3,600, survey and set-up S$12,000</td><td>CIO</td><td style="color:#9a6700">Likely</td><td style="color:#1a7f4b">Confirmed</td></tr>
+<tr><td>A40</td><td>Pilot pool</td><td>50 + 10 hardened anchors, 200 tags: about S$15,000</td><td>JC, CIO</td><td style="color:#9a6700">Likely</td><td style="color:#1a7f4b">Confirmed</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 54</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Every price, cost and time in this deck traces to one of these 50 assumptions. v0.10 renumbered the register around the CIO framework. The next pages list what changed from v0.9. Source: CIO = CIO Office documents of 3 Oct 2026; JC = management inputs; Map = product map; Mine = my assumption, for you to refine.</p></details></div><div class="slide" id="s55"><div class="num">55</div><div class="frame"><section id="assume-5" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Assumptions register · 5 of 5</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Market, funnel and sales</h2>
+<p style="font-size:26px;color:#5f6368">Confidence: <span style="color:#1a7f4b">Certain</span> = primary source · <span style="color:#9a6700">Likely</span> = good secondary source · <span style="color:#cc0000">Guessing</span> = my judgement; never in a Sales Sheet</p>
+</div>
+<table style="font-size:21px;color:#202124;border:1px solid #dadce0;padding:5px 10px">
+<tr style="background:#f1f3f4"><th style="width:6%">ID</th><th style="width:17%">Assumption</th><th style="width:44%">Value used</th><th style="width:13%">Source</th><th style="width:10%">Confidence</th><th style="width:10%">Status</th></tr>
+<tr><td>A41</td><td>Healthcare market</td><td>Singapore S$12.9M a year (FY28); Japan about S$249M</td><td>CIO (MOH, MHLW)</td><td style="color:#1a7f4b">Certain</td><td style="color:#1a7f4b">Confirmed</td></tr>
+<tr><td>A42</td><td>Japan healthcare</td><td>Self-hosted only (MHLW guideline)</td><td>CIO</td><td style="color:#1a7f4b">Certain</td><td style="color:#1a7f4b">Confirmed</td></tr>
+<tr><td>A43</td><td>Markets, accounts</td><td>From the product map; TTSH, LTA, CAG in pursuit</td><td>Map</td><td style="color:#1a7f4b">Certain</td><td style="color:#1a7f4b">Confirmed</td></tr>
+<tr><td>A44</td><td>Other markets</td><td>No market size or competitor research yet (stage 3)</td><td>—</td><td style="color:#cc0000">Guessing</td><td style="color:#cc0000">Open</td></tr>
+<tr><td>A45</td><td>Funnel</td><td>Pass rates 40/60/50/80/70%; ~15 first meetings per win; stage times</td><td>Mine</td><td style="color:#cc0000">Guessing</td><td style="color:#6b4c9a">My assumption</td></tr>
+<tr><td>A46</td><td>Marketing</td><td>S$12,800 per win; about S$154,000 a year</td><td>Mine</td><td style="color:#cc0000">Guessing</td><td style="color:#6b4c9a">My assumption</td></tr>
+<tr><td>A47</td><td>Sales effort</td><td>S$1,540 a day; 8–40 days per deal</td><td>Mine</td><td style="color:#cc0000">Guessing</td><td style="color:#6b4c9a">My assumption</td></tr>
+<tr><td>A48</td><td>Commission</td><td>10% of year-1 recurring revenue; profit-based plan optional</td><td>SaaStr</td><td style="color:#9a6700">Likely</td><td style="color:#6b4c9a">For decision</td></tr>
+<tr><td>A49</td><td>Staffing</td><td>About 23 FTE; core team of 7; hiring triggers</td><td>JC, mine</td><td style="color:#9a6700">Likely</td><td style="color:#cc0000">To verify</td></tr>
+<tr><td>A50</td><td>Support salaries</td><td>L1/L2 S$70,000–130,000</td><td>Morgan McKinley 2026</td><td style="color:#1a7f4b">Certain</td><td style="color:#5f6368">Benchmark</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 55</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Every price, cost and time in this deck traces to one of these 50 assumptions. v0.10 renumbered the register around the CIO framework. The next pages list what changed from v0.9. Source: CIO = CIO Office documents of 3 Oct 2026; JC = management inputs; Map = product map; Mine = my assumption, for you to refine.</p></details></div><div class="slide" id="s56"><div class="num">56</div><div class="frame"><section id="changes" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#005bb6">Changes from v0.9</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">The CIO documents replace 12 earlier inputs</h2>
+</div>
+<table style="font-size:22px;color:#202124;border:1px solid #dadce0;padding:5px 12px">
+<tr style="background:#f1f3f4"><th style="width:20%">Topic</th><th style="width:40%">v0.9 (earlier input)</th><th style="width:40%">v0.10 (CIO)</th></tr>
+<tr><td>Accuracy</td><td>~10 cm (map); ~150 cm design target (JC)</td><td>±20 cm, badge, confirmed by Engineering</td></tr>
+<tr><td>Hardware cost</td><td>Anchor US$200, tag US$30</td><td>Anchor S$100, tag S$40</td></tr>
+<tr><td>Hardware model</td><td>Sale at 50% / 30% margin; HaaS optional</td><td>Monthly hardware service; STYL owns it</td></tr>
+<tr><td>Software</td><td>Core, Operate, Sovereign bands + per device</td><td>One package per product; price per buyer unit</td></tr>
+<tr><td>Edge server</td><td>Sold at US$61,400, 30% margin</td><td>Customer provides servers to our specification</td></tr>
+<tr><td>Installation</td><td>10-day package per site</td><td>Site survey + price for each anchor</td></tr>
+<tr><td>Margin rule</td><td>45% floor per deal</td><td>30% floor per quote; 40% target over 24 months</td></tr>
+<tr><td>Discounts</td><td>Volume and term bands</td><td>One list price; Sales Director 20%, CEO above</td></tr>
+<tr><td>Pilot</td><td>Licence + services; loan server</td><td>Fixed fee, 90 days, box on site, credited</td></tr>
+<tr><td>Battery</td><td>About 3 months, customer changes it</td><td>Badge: charge each week</td></tr>
+<tr><td>Hosting, healthcare</td><td>On-prem only (map)</td><td>Customer chooses; Japan self-hosted only</td></tr>
+<tr><td>Currency</td><td>USD</td><td>SGD before GST</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 56</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>You chose: the CIO wins where the documents conflict. Each change is in the register with its source. The biggest effects: hardware is now cheap and is a service; healthcare return rises to 227%; small cloud sites need care. The v0.9 deck is kept in the version history if you need the earlier figures.</p></details></div><div class="slide" id="s57"><div class="num">57</div><div class="frame"><section id="open-items" data-transition="fade" style="background:#ffffff;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#cc0000">Still to confirm</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">Twelve open items, each with an owner and a date</h2>
+</div>
+<table style="font-size:22px;color:#202124;border:1px solid #dadce0;padding:5px 12px">
+<tr style="background:#f1f3f4"><th style="width:15%">Item</th><th style="width:22%">Owner</th><th style="width:40%">What we need</th><th style="width:23%">By when</th></tr>
+<tr><td>A3, A25–A28</td><td>Product lead, Sales Director</td><td>Approve units and prices for Operations, Flow, Gates</td><td>Before the first quote</td></tr>
+<tr><td>A13, A18</td><td>Engineering</td><td>Gate speed with the 8-tag limit</td><td>Before the LTA study ends</td></tr>
+<tr><td>A19</td><td>Engineering</td><td>Passenger phones per anchor</td><td>Before the CAG pilot</td></tr>
+<tr><td>A17</td><td>Engineering</td><td>Test hardened anchors and tags</td><td>Before a cargo or safety pilot</td></tr>
+<tr><td>A21</td><td>Sales</td><td>Test the Ward price with 3 hospitals</td><td>After 3 pilots</td></tr>
+<tr><td>A14</td><td>Product, Hardware</td><td>Equipment tag with a long battery</td><td>Q1 2027</td></tr>
+<tr><td>A31, A36</td><td>Hardware, Finance</td><td>Confirm costs from the bill of materials</td><td>Before the first quote</td></tr>
+<tr><td>A34–A37</td><td>Tech, Finance</td><td>Measure run costs and AI cost</td><td>3 months after the first pilot</td></tr>
+<tr><td>A38</td><td>Management</td><td>24/7 rota and its cost</td><td>Before the first Flow or Gates deal</td></tr>
+<tr><td>A44</td><td>Product</td><td>Market and competitor research for each product</td><td>Before each Sales Sheet</td></tr>
+<tr><td>A45–A47</td><td>Sales</td><td>Real funnel data from CRM</td><td>After 20 first meetings</td></tr>
+<tr><td>References</td><td>Sales</td><td>Consent target date for each account</td><td>Sales sets it</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 57</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Four items are Engineering facts that the CIO process requires before release (stage 2). Two are price decisions. The rest are measurements we make in the first pilots. Everything else in the register can stay as it is until a team corrects it.</p></details></div><div class="slide" id="s58"><div class="num">58</div><div class="frame"><section id="references" data-transition="fade" style="background:#f1f3f4;color:#202124;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#cc0000">Pending · Reference consent</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15">No account can be named yet</h2>
+<p style="font-size:26px;color:#5f6368">TTSH, LTA and CAG are in pursuit. Toppan, Quadrac, Odawara and AIC are in early talks. Sales sets the consent dates.</p>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#ffffff;padding:24px 28px;border-radius:16px"><h3 style="font-size:30px;font-weight:600">No names without consent</h3><p style="font-size:24px;line-height:1.4;color:#5f6368">The Sales Playbook does not permit a customer name without written consent: not in decks, tenders or showcases.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#ffffff;padding:24px 28px;border-radius:16px"><h3 style="font-size:30px;font-weight:600">Tenders ask for references</h3><p style="font-size:24px;line-height:1.4;color:#5f6368">Government, airport and transit buyers want live references. Ward has no hospital reference yet.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#ffffff;padding:24px 28px;border-radius:16px"><h3 style="font-size:30px;font-weight:600">Ask at signature</h3><p style="font-size:24px;line-height:1.4;color:#5f6368">Ask at signature: it almost always works. Ask after: it works about half the time.</p></div>
+</div>
+<p style="font-size:26px;line-height:1.4;background:#ffffff;padding:18px 28px;border-radius:12px;border:2px solid #0080ff"><span style="font-weight:600">Action: </span>put a reference and case-study clause in every pilot contract. A signed success test starts it. The CIO sheet says the same: agree a reference before the pilot.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5f6368">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 58</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>The "half the time" figure comes from our GTM Review. A reference is also a CIO condition for the region: Solace co-sell needs one live hospital reference.</p></details></div><div class="slide" id="s59"><div class="num">59</div><div class="frame"><section id="next" data-transition="fade" style="background:#202124;color:#f8f9fa;font-family:'Onest', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#6099ff">Next steps</p>
+<h2 style="font-size:56px;font-weight:600;line-height:1.15;color:#f8f9fa">What happens after today</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#3c4043;padding:28px 32px;border-radius:16px"><h3 style="font-size:30px;font-weight:600;color:#f8f9fa">Product (CIO process)</h3><p style="font-size:26px;line-height:1.4;color:#dadce0">Write the Sales Sheet and Product Team Brief for Operations, Flow and Gates.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#3c4043;padding:28px 32px;border-radius:16px"><h3 style="font-size:30px;font-weight:600;color:#f8f9fa">Engineering</h3><p style="font-size:26px;line-height:1.4;color:#dadce0">Confirm gate speed, phones per anchor and hardened kit.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#3c4043;padding:28px 32px;border-radius:16px"><h3 style="font-size:30px;font-weight:600;color:#f8f9fa">Supply chain</h3><p style="font-size:26px;line-height:1.4;color:#dadce0">Order the pilot pool now. It arrives in about 3 months.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#3c4043;padding:28px 32px;border-radius:16px"><h3 style="font-size:30px;font-weight:600;color:#f8f9fa">Sales and BD</h3><p style="font-size:26px;line-height:1.4;color:#dadce0">Run workshops with TTSH, CAG and LTA. Agree one NXP co-funded pilot.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#3c4043;padding:28px 32px;border-radius:16px"><h3 style="font-size:30px;font-weight:600;color:#f8f9fa">Finance</h3><p style="font-size:26px;line-height:1.4;color:#dadce0">Confirm costs from the bill of materials. Check margins on each quote.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#3c4043;padding:28px 32px;border-radius:16px"><h3 style="font-size:30px;font-weight:600;color:#f8f9fa">Management</h3><p style="font-size:26px;line-height:1.4;color:#dadce0">The five decisions, and owners for the 12 open items.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#bdc1c6">STYL · Atlantic UWB go-to-market v0.10 · Preliminary, internal · 59</p>
+
+</section>
+</div><details class="notes"><summary>Speaker notes</summary><p>Close with the five decisions. The pilot pool order starts the clock for all other work.</p></details></div></div>
+<script>
+function fit(){document.querySelectorAll('.frame').forEach(f=>{const s=f.firstElementChild;if(s)s.style.transform='scale('+(f.clientWidth/1920)+')';});}
+addEventListener('resize',fit);fit();document.fonts&&document.fonts.ready.then(fit);
+</script></body></html>

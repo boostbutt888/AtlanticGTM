@@ -1,0 +1,280 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Atlantic GTM Context</title><style>
+:root{--bg:#eef1f4;--paper:#f8fafb;--ink:#14243a;--muted:#5d6b7c;--line:#c4ccd6;--focus:#1f6f8b;--chip:#e3e8ee;--ok:#2e7d4f;--ok-soft:#dcf1e3;--warn:#9a6700;--warn-soft:#fbefd2;--bad:#b42318;--bad-soft:#fde4e1;--doc:#1f6f8b;--doc-soft:#dcecf2;
+--f-display:"Familjen Grotesk","Helvetica Neue",Arial,sans-serif;--f-body:"Source Sans 3","Segoe UI",Roboto,sans-serif;--f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1720;--paper:#16212d;--ink:#e3e9f0;--muted:#93a1b2;--line:#33475b;--focus:#6cc0db;--chip:#213041;--ok:#7fd3a0;--ok-soft:#173a26;--warn:#f0c46a;--warn-soft:#3a2e12;--bad:#f39a90;--bad-soft:#3d1c19;--doc:#6cc0db;--doc-soft:#173544;color-scheme:dark}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}
+.wrap{max-width:1320px;margin:0 auto;padding:28px 20px 56px}
+.top{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;font-size:14px;margin-bottom:14px}
+.top a{color:var(--focus);font-weight:600}
+.eyebrow{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--f-display);font-size:clamp(26px,3.2vw,36px);line-height:1.1;margin:6px 0 4px;text-wrap:balance}
+h2{font-family:var(--f-display);font-size:22px;margin:30px 0 8px}h3{font-family:var(--f-display);font-size:17px;margin:20px 0 8px}
+p,li{max-width:80ch}a{color:var(--focus)}
+.tbl{overflow-x:auto;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--paper);position:sticky;top:0}
+td:first-child{font-weight:600;white-space:nowrap}
+.pill{display:inline-block;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:999px;white-space:nowrap;background:var(--chip);color:var(--muted)}
+.p-ok{background:var(--ok-soft);color:var(--ok)}.p-warn{background:var(--warn-soft);color:var(--warn)}.p-bad{background:var(--bad-soft);color:var(--bad)}.p-doc{background:var(--doc-soft);color:var(--doc)}
+code{font-family:var(--f-mono);font-size:13px}pre{overflow-x:auto;background:var(--paper);padding:12px;border-radius:8px}
+.foot{color:var(--muted);font-size:13px;margin-top:28px}
+</style><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap"></head><body><div class="wrap"><div class="top"><a href="Atlantic_Product_Market_Customer_Map.html">← Product map</a><a href="Atlantic_UWB_GTM_Plan_v0.10_2026-10-07.html">GTM plan deck</a><a href="Atlantic_UWB_GTM_Register_v0.10_2026-10-09.html">Register</a><a href="Atlantic_UWB_GTM_CONTEXT_v0.10_2026-10-07.html">Context file</a></div><div class="eyebrow">STYL Solutions · Atlantic GTM · Handover</div><h1>Atlantic UWB Go-To-Market Plan — handover context</h1>
+<p><strong>Current version:</strong> v0.10 · 7 October 2026 · Owner: JC (product and vertical owner, STYL Solutions)
+<strong>Status:</strong> Preliminary, internal. Not for customers. All prices in SGD before GST (US$1 = S$1.28 for USD inputs).</p>
+<p>This file travels with the deck so another person can pick it up. Update the version history every time the deck is refined.</p>
+<hr />
+<h2>1. Purpose and audience</h2>
+<ul>
+<li><strong>What it is:</strong> the go-to-market execution plan for the Atlantic UWB products. It covers what we sell, to whom, how deals run, prices, costs, seven worked examples with breakeven and return, margin checks, and the open items.</li>
+<li><strong>Audience:</strong> CEO and Sales Director. JC presents it as product and vertical owner.</li>
+<li><strong>Goal of the session:</strong> five decisions (slide 3) and owners for the 12 open items (slide 57).</li>
+</ul>
+<h2>2. Governing documents and sources</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CIO Office: STYL Product Sheet Process Guide v1.0 (3 Oct 2026)</td>
+<td><strong>The framework.</strong> Six stages per product (scope, facts, market, price, write, release), six price rules, margin and discount rules, STE writing rules, release checklist. Wins over earlier inputs.</td>
+</tr>
+<tr>
+<td>CIO Office: Precision RTLS Hospital Sales Sheet v1.0 and Product Team Brief v1.0 (draft for review)</td>
+<td>Ward prices, product facts, healthcare market size, competitors, stress test, Proxximos price check.</td>
+</tr>
+<tr>
+<td>Atlantic Product–Market–Customer Map (Sep 2026)</td>
+<td>Products, markets, named accounts.</td>
+</tr>
+<tr>
+<td>JC inputs (6–7 Oct 2026)</td>
+<td>Supply terms, install day rates, engineer-day cost, pilot pool, staffing. Superseded where the CIO documents conflict (see slide 56).</td>
+</tr>
+<tr>
+<td>Model scripts</td>
+<td><code>model_v10.py</code> (SGD, three-part pricing, breakeven, ROI, 24-month and quote margins). Earlier USD models <code>cash.py</code> and <code>deal2.py</code> are kept for v0.9 comparison.</td>
+</tr>
+<tr>
+<td>Claude Docs "Atlantic UWB proposal"</td>
+<td>Original proposal. Not updated since v0.3.</td>
+</tr>
+</tbody>
+</table></div>
+<h2>3. The uniform framework (from the CIO)</h2>
+<ul>
+<li><strong>Every quote has three parts:</strong> software per unit per year + hardware service per unit per month (STYL owns the hardware) + set-up one time (site survey, installation per anchor, integration).</li>
+<li><strong>Price unit = what the buyer budgets in:</strong> bed (Ward), 1,000 m² (Operations RTLS, Flow), gate (Gates).</li>
+<li><strong>Packages:</strong> three maximum per product, one marked "start here". Two host options: cloud (included) or self-hosted (S$95,000 platform fee per deployment; customer provides servers). Core / Operate / Sovereign editions are retired.</li>
+<li><strong>Rules:</strong> minimum software fee S$60,000 per site per year (Gates S$250,000 per operator); 3-year contract; extra tags S$800 per 10; no quote below 30% gross margin; target 40% per customer over 24 months; Sales Director approves discounts up to 20%, CEO above; no discount on minimum or platform fee.</li>
+<li><strong>Pilots:</strong> fixed fee, fixed duration, credited to year 1 if the customer buys. Ward S$40,000 / 90 days; Operations S$25,000 (hardened S$35,000); Flow S$60,000; Gates S$120,000 / 120 days.</li>
+<li><strong>Evidence:</strong> every technical claim needs Engineering confirmation; every market fact carries a confidence tag (Certain / Likely / Guessing); Guessing never goes into a Sales Sheet.</li>
+<li><strong>Writing:</strong> Simplified Technical English (ASD-STE100), target 80%.</li>
+</ul>
+<h2>4. Products, prices and release status</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Unit</th>
+<th>Software / unit / year</th>
+<th>Hardware / unit / month</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Precision RTLS · Ward</td>
+<td>Bed</td>
+<td>S$450</td>
+<td>S$30 bays, S$60 1–2 bed rooms</td>
+<td>CIO sheet v1.0, stage 5; sign-offs pending</td>
+</tr>
+<tr>
+<td>Precision RTLS · Operations</td>
+<td>1,000 m²</td>
+<td>S$9,000</td>
+<td>S$250 (hardened S$500)</td>
+<td>Proposal (mine), stage 1–4 partial</td>
+</tr>
+<tr>
+<td>Flow &amp; Wayfinding</td>
+<td>1,000 m² public area</td>
+<td>S$12,000</td>
+<td>S$250</td>
+<td>Proposal (mine)</td>
+</tr>
+<tr>
+<td>Hands-free Gates</td>
+<td>Gate</td>
+<td>S$400</td>
+<td>S$30</td>
+<td>Proposal (mine)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Simulate is a workshop tool and a paid gate study (S$28,000). Occupancy, Device Ops and Environmental Sensing use no UWB and are not priced here.</p>
+<p><strong>Key product facts (Engineering, via CIO):</strong> ±20 cm accuracy (badge on a person); 2 positions each second; 1 anchor serves 8 tags at one time; badge needs a charge each week; not medical grade; no help button. <strong>Not yet confirmed:</strong> hardened kit, gate throughput with the 8-tag limit, passenger phones per anchor.</p>
+<h2>5. Headline numbers (v0.10, preliminary)</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Product</th>
+<th>First PO</th>
+<th>Year 1</th>
+<th>3-yr ROI</th>
+<th>24-month margin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TTSH, 500 beds, self-hosted</td>
+<td>Ward</td>
+<td>Month 9</td>
+<td>S$544K</td>
+<td>227%</td>
+<td>73%</td>
+</tr>
+<tr>
+<td>CAG terminal, 25,000 m²</td>
+<td>Flow</td>
+<td>Month 11</td>
+<td>S$498K</td>
+<td>93%</td>
+<td>51%</td>
+</tr>
+<tr>
+<td>SATS/dnata cargo, 2 sites</td>
+<td>Operations</td>
+<td>Month 8</td>
+<td>S$494K</td>
+<td>92%</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>LTA, 720 gates</td>
+<td>Gates</td>
+<td>Month 17</td>
+<td>S$1.22M</td>
+<td>88%</td>
+<td>47%</td>
+</tr>
+<tr>
+<td>MOE via DBS, 5 schools</td>
+<td>Operations</td>
+<td>Month 16</td>
+<td>S$868K</td>
+<td>140%</td>
+<td>61%</td>
+</tr>
+<tr>
+<td>3PL warehouse, 1 site</td>
+<td>Operations</td>
+<td>Month 6</td>
+<td>S$120K</td>
+<td>39%</td>
+<td>35% (below 40% target)</td>
+</tr>
+<tr>
+<td>Construction site, hardened</td>
+<td>Operations</td>
+<td>Month 8.5</td>
+<td>S$182K</td>
+<td>62%</td>
+<td>43%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Breakeven is about 4 months after the PO in every example. All examples pass the 30% quote floor.</p>
+<h2>6. Assumptions and open items</h2>
+<ul>
+<li><strong>Register:</strong> A1–A50 on slides 51–55, renumbered in v0.10 around the CIO framework. Columns: value, source (CIO / JC / Map / Mine / benchmark), confidence, status.</li>
+<li><strong>Changes from v0.9:</strong> slide 56 lists the 12 inputs that the CIO documents replaced.</li>
+<li><strong>12 open items</strong> (slide 57). Most urgent: approve units and prices for Operations, Flow and Gates (A3, A25–A28); Engineering facts for gates, phones and hardened kit (A13, A17–A19); confirm costs from the bill of materials (A31, A36).</li>
+</ul>
+<h2>7. Editing conventions</h2>
+<ul>
+<li>Every variable figure traces to an A-number. Do not remove a label until the assumption is confirmed.</li>
+<li>Footer on every content slide: "STYL · Atlantic UWB go-to-market vX.Y · Preliminary, internal · NN". Change the version in every footer when you bump it.</li>
+<li>Versioning: v0.x while preliminary. v1.0 when management approves the price basis and the five decisions.</li>
+<li>File naming: <code>&lt;name&gt;_vX.Y_YYYY-MM-DD</code>. Deck title <code>Atlantic_UWB_GTM_Plan_vX.Y_YYYY-MM-DD</code>; this file <code>Atlantic_UWB_GTM_CONTEXT_vX.Y_YYYY-MM-DD.md</code>.</li>
+<li>Slide text follows STE: short sentences, active voice, numbers with units, no jargon. Quoted sales lines can be natural speech.</li>
+</ul>
+<hr />
+<h2>8. Version history</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>By</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v0.1</td>
+<td>6 Oct 2026</td>
+<td>JC</td>
+<td>First deck built from the proposal document: plan, segments, prices, costs, examples, open questions</td>
+</tr>
+<tr>
+<td>v0.2</td>
+<td>6 Oct 2026</td>
+<td>JC</td>
+<td>Reorganised into 8 sections with divider slides: strategy, segments, framework, prices, costs, examples, margins and ROI, to finalise</td>
+</tr>
+<tr>
+<td>v0.3</td>
+<td>6 Oct 2026</td>
+<td>JC</td>
+<td>Refactored from JC's red comments on the .pptx. Added ROI and breakeven per segment, ROI by business model (platform, hardware sale, HaaS Hardware, HaaS All-in), subscription costing, assumptions A33–A50 with status colours, and 11 open items</td>
+</tr>
+<tr>
+<td>v0.4</td>
+<td>7 Oct 2026</td>
+<td>JC</td>
+<td>Added the executive summary slide (slide 2): eight-section agenda, headline numbers, pointer to the five decisions</td>
+</tr>
+<tr>
+<td>v0.5</td>
+<td>7 Oct 2026</td>
+<td>JC</td>
+<td>Added version, date and owner (JC) to the cover and all footers. Added this context file. Replaced bold tags the slide editor rejects, so all slides can be edited in the browser</td>
+</tr>
+<tr>
+<td>v0.6</td>
+<td>7 Oct 2026</td>
+<td>JC</td>
+<td>Removed "For the CEO and Sales Director" from the cover; cover now shows owner, version and date only</td>
+</tr>
+<tr>
+<td>v0.7</td>
+<td>7 Oct 2026</td>
+<td>JC</td>
+<td>File naming convention added: deck title and this context file now include version and date (<code>_v0.7_2026-10-07</code>)</td>
+</tr>
+<tr>
+<td>v0.8</td>
+<td>7 Oct 2026</td>
+<td>JC</td>
+<td>Applied JC's assumption inputs. A7: edge server one installed price, $61.4K at 30% margin. A8: 10-man-day standard install package per site, then per man-day. A13: engineer-day at 50% margin. A24 and A18: about 150 cm is enough for most uses. Added A51–A52 and register page 6. Re-ran the model: pilots now $33–83K, year 1 $135K–1.83M, 3-year ROI 69–159%, HaaS All-in $22,430 a month; breakeven months unchanged. Updated the price, cost, margin, HaaS, segment, summary and open-items slides</td>
+</tr>
+<tr>
+<td>v0.9</td>
+<td>7 Oct 2026</td>
+<td>JC</td>
+<td>Refactored on the Atlantic Product–Market–Customer Map. Added three slides: the 7 Atlantic products and which are priced here, the product × market matrix, and named accounts per market. Segments now follow the map markets, each tied to one product; manufacturing and industrial safety kept as later. Map won on conflicts, flagged in the register: healthcare on-prem Sovereign (A55, A56), LTA as transit lead (A57), ~10 cm capability (A18). Added A53–A57; 12 open items. Re-ran healthcare and transit: year 1 now $135K–1.73M, ROI 69–159%, gross margin 48–65%</td>
+</tr>
+<tr>
+<td>v0.10</td>
+<td>7 Oct 2026</td>
+<td>JC</td>
+<td>Rebuilt on the CIO Office framework (Product Sheet Process Guide v1.0; Precision RTLS Ward sheet and brief v1.0). Every UWB product now has one price unit and three parts (software, hardware service, set-up), fixed-fee pilots, a 30% quote floor and 40% 24-month target, and the two-level discount rule. Ward prices taken from the CIO sheet; Operations, Flow and Gates prices proposed in the same structure. Currency changed to SGD. Hardware is now a monthly service; editions, edge-server sale, HaaS options and the 10-day install package retired. Added slides: framework, release status, host options, healthcare market and competitors, stress test, benchmark, cash, changes from v0.9. Register rebuilt (A1–A50) with source and confidence tags. Text rewritten in simplified English. New model model_v10.py: year 1 S$120K–1.22M, 3-yr ROI 39–227%, breakeven ~4 months after PO</td>
+</tr>
+</tbody>
+</table></div><p class="foot">STYL Solutions · Internal · Preliminary · do not send to customers</p></div></body></html>
